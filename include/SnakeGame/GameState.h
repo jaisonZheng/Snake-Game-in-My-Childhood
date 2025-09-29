@@ -2,6 +2,9 @@
 
 #include "Types.h"
 
+// 这是整个游戏状态控制的核心，所有的游戏状态都是以这个为基类，所有的状态类都需要重写本类。
+// 这么搞是为了良好的工程实践。
+
 class Game;
 
 class GameState

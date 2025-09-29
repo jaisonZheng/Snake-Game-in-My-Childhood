@@ -6,6 +6,7 @@
 #include <random>
 #include <algorithm>
 
+
 PlayingState::PlayingState() 
     : game_speed(10), frame_counter(0)
 {
@@ -21,6 +22,7 @@ void PlayingState::on_enter(Game* game)
     {
         return;
     }
+
 
     walls.clear();
 

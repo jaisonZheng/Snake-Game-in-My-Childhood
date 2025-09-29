@@ -6,6 +6,7 @@
 #include <cmath>
 // 
 #include <memory>
+
 // 
 Game::Game() : state_(new MainMenuState()), map_size{240, 320}
 {
@@ -32,7 +33,6 @@ void Game::run()
 		render();
 		end_frame(60); // 60 FPS
 	}
-
 	shutdown();
 }
 

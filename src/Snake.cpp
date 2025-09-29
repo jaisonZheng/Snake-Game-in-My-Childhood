@@ -13,7 +13,7 @@ Snake::Snake()
     显然已开始蛇的蛇头应当出现在一个固定的位置，
     未指定时，蛇身的长度为0，但是要初始化蛇身vector
     蛇速未定，（注意 速度应当是世界的规则（即多久更新一次frame））
-    头方向朝下
+    头方向朝右
     */
     head = Coord{0, 0};
     length = 1;
@@ -109,7 +109,7 @@ void Snake::move(const MapSize& boundary, bool is_eating_food)
 void Snake::reset(const MapSize& map_size)
 {
     body.clear();
-    direction = Direction::DOWN;
+    direction = Direction::RIGHT;
 
     const int max_x = std::max(1, map_size.width / CELL_SIZE);
     const int max_y = std::max(1, map_size.height / CELL_SIZE);
