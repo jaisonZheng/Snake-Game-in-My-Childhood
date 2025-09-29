@@ -8,6 +8,8 @@
 #include <algorithm>
 #include <cstdlib>
 #include <utility>
+#include <sstream>
+#include <iomanip>
 
 // 所有跟ege这个垃圾图形库有关的东西全部在这个文件中搞定。
 // 这个图形库真的是依托答辩，我实在是搞不懂配环境就要配6h+的垃圾图形库怎么会有人用。
@@ -24,6 +26,7 @@ namespace
 	PIMAGE g_apple_image = nullptr;
 	PIMAGE g_snake_head_image = nullptr;
 	PIMAGE g_snake_body_image = nullptr;
+	PIMAGE g_wall_image = nullptr;
 
 	color_t g_apple_key = 0;
 	void release_snake_variants(); // Forward declaration
@@ -32,6 +35,7 @@ namespace
 
 	color_t g_snake_head_key = 0;
 	color_t g_snake_body_key = 0;
+	color_t g_wall_key = 0;
 
 	int g_bg_width = 0;
 	int g_bg_height = 0;
@@ -41,6 +45,8 @@ namespace
 	int g_snake_head_height = CELL_SIZE;
 	int g_snake_body_width = CELL_SIZE;
 	int g_snake_body_height = CELL_SIZE;
+	int g_wall_width = CELL_SIZE;
+	int g_wall_height = CELL_SIZE;
 
 	std::string resolve_asset_path(const std::string& filename)
 	{
@@ -260,6 +266,7 @@ void initialize(const MapSize& size)
 		g_apple_image = load_image("apple-sheet0.png");
 		g_snake_head_image = load_image("snake_lock_head-sheet0.png");
 		g_snake_body_image = load_image("snake_body-sheet0.png");
+		g_wall_image = load_image("tbstaticwall.png");
 
 		if (g_bg_image)
 		{
@@ -284,6 +291,13 @@ void initialize(const MapSize& size)
 		{
 			g_snake_body_width = getwidth(g_snake_body_image);
 			g_snake_body_height = getheight(g_snake_body_image);
+		}
+
+		if (g_wall_image)
+		{
+			g_wall_width = getwidth(g_wall_image);
+			g_wall_height = getheight(g_wall_image);
+			g_wall_key = getpixel(0, 0, g_wall_image);
 		}
 
 		build_snake_variants();
@@ -315,6 +329,7 @@ void shutdown()
 	{
 		delimage(g_apple_image);
 		g_apple_image = nullptr;
+		g_apple_key = 0;
 	}
 	if (g_snake_head_image)
 	{
@@ -325,6 +340,12 @@ void shutdown()
 	{
 		delimage(g_snake_body_image);
 		g_snake_body_image = nullptr;
+	}
+	if (g_wall_image)
+	{
+		delimage(g_wall_image);
+		g_wall_image = nullptr;
+		g_wall_key = 0;
 	}
 
 	closegraph();
@@ -393,6 +414,7 @@ std::optional<KeyEvent> poll_key_event()
 	case VK_ESCAPE:
 	case ' ': // 空格键
 	case VK_RETURN: // 回车键
+	case 'r': // 模式鍵
 		event.type = KeyMessageType::Others;
 		break;
 	default:
@@ -427,6 +449,25 @@ void draw_apple(const Coord& position)
 	const int tile_bottom = (position.y + 1) * CELL_SIZE;
 	int y = tile_bottom - g_apple_height;
 	putimage_transparent(nullptr, g_apple_image, x, y, g_apple_key);
+}
+
+void draw_bonus(const Coord& position)
+{
+	const int center_x = position.x * CELL_SIZE + CELL_SIZE / 2;
+	const int center_y = position.y * CELL_SIZE + CELL_SIZE / 2;
+	const int radius = std::max(2, CELL_SIZE / 2 - 2);
+
+	setcolor(EGERGB(255, 0, 0));
+// 	void solidellipse(
+//     int x,
+//     int y,
+//     int xradius,
+//     int yradius,
+//     PIMAGE pimg = NULL
+// 	);
+//  不敢睁开眼 以为是幻觉，，，，居然连这玩意都没有吗 那我怎么画填充圆？
+// 人机ege
+	circle(center_x, center_y, radius);
 }
 
 // 绘制蛇头
@@ -473,7 +514,14 @@ void draw_snake_body(const std::deque<Coord>& body, const Coord& head)
 // 绘制墙壁
 void draw_wall(const Coord& position)
 {
-	(void)position;
+	const int tile_left = position.x * CELL_SIZE;
+	const int tile_top = position.y * CELL_SIZE;
+
+	const int draw_x = tile_left + (CELL_SIZE - g_wall_width) / 2;
+	const int draw_y = tile_top + (CELL_SIZE - g_wall_height) / 2;
+	putimage_transparent(nullptr, g_wall_image, draw_x, draw_y, g_wall_key);
+	return;
+	
 }
 
 void draw_text_centered(int y, const std::string& text, int font_size, unsigned int color)
@@ -484,4 +532,31 @@ void draw_text_centered(int y, const std::string& text, int font_size, unsigned 
 	int text_width = textwidth(text.c_str());
 	int x = (getwidth() - text_width) / 2;
 	outtextxy(x, y, text.c_str());
+}
+
+void draw_hud(int score, float bonus_time_left)
+{
+	setbkmode(TRANSPARENT);
+	setfont(16, 0, "Consolas");
+	setcolor(EGERGB(255, 255, 255));
+
+	std::ostringstream score_stream;
+	score_stream << "Score: " << score;
+	const std::string score_text = score_stream.str();
+	outtextxy(10, 10, score_text.c_str());
+
+	std::ostringstream timer_stream;
+	if (bonus_time_left > 0.0f)
+	{
+		timer_stream << "Bonus: " << std::fixed << std::setprecision(1) << bonus_time_left << "s";
+	}
+	else
+	{
+		timer_stream << "Bonus: --";
+	}
+
+	const std::string timer_text = timer_stream.str();
+	int timer_width = textwidth(timer_text.c_str());
+	int timer_x = getwidth() - timer_width - 10;
+	outtextxy(timer_x, 10, timer_text.c_str());
 }

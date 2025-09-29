@@ -17,12 +17,12 @@ Snake::Snake()
     */
     head = Coord{0, 0};
     length = 1;
-    direction = Direction::DOWN;
+    direction = Direction::RIGHT;
     body = deque<Coord>{};
     turn_locked = false;
 }
 
-Snake::Snake(const Coord& initialCoord, const Direction& initialDir)
+Snake::Snake (const Coord& initialCoord, const Direction& initialDir)
 {
     head = initialCoord;
     length = 1;

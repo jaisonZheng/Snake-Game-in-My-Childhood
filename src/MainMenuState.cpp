@@ -19,7 +19,7 @@ void MainMenuState::handle_input(Game* game, const KeyEvent& key)
 
     if (key.type == KeyMessageType::Direction)
     {
-        game->start_new_game();
+        game->start_new_game(Mode::Classics);
         return;
     }
 
@@ -28,7 +28,11 @@ void MainMenuState::handle_input(Game* game, const KeyEvent& key)
         // 按空格键或回车键开始游戏
         if (key.key == ' ' || key.key == VK_RETURN)
         {
-            game->start_new_game();
+            game->start_new_game(Mode::Classics);
+        }
+        if (key.key == 'r')
+        {
+            game->start_new_game(Mode::Railways);
         }
     }
 }
@@ -47,5 +51,6 @@ void MainMenuState::draw(Game* game)
 
     draw_text_centered(140, "贪吃蛇", 24, 0x00FFFFFF);
     draw_text_centered(220, "按空格、回车或方向键开始", 14, 0x00FFFF66);
+    draw_text_centered(240, "按r键进入Railway模式", 14, 0x00FFFF66);
     draw_text_centered(280, "WASD / 方向键移动，ESC 暂停", 12, 0x00FFFFFF);
 }

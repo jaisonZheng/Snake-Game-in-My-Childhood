@@ -2,16 +2,15 @@
 #include "../include/SnakeGame/MainMenuState.h"
 #include "../include/SnakeGame/PlayingState.h"
 #include "../include/SnakeGame/Render.h"
-// 我现在非常怀疑采取这样一种文件夹方式是否是一个好的工程实践，，，
-
+#include <algorithm>
+#include <cmath>
+// 
 #include <memory>
 // 
-
-Game::Game()
-	: map_size(PIXEL_MAP_SIZE)
-	, snake{}
-	, state_(std::make_unique<MainMenuState>())
+Game::Game() : state_(new MainMenuState()), map_size{240, 320}
 {
+	reset_progress();
+
 	snake.reset(map_size);
 
 	if (state_)
@@ -37,8 +36,10 @@ void Game::run()
 	shutdown();
 }
 
-void Game::start_new_game()
+void Game::start_new_game(const Mode& mode)
 {
+	mode_ = mode;
+	reset_progress();
 	snake.reset(map_size);
 	change_state(std::make_unique<PlayingState>());
 }
@@ -78,6 +79,74 @@ const Snake& Game::get_snake() const
 	return snake;
 }
 
+int Game::get_score() const
+{
+	return score_;
+}
+
+void Game::on_apple_collected()
+{
+	++total_apples_collected_;
+	++apples_since_last_bonus_;
+	score_ += 1;
+
+	if (!bonus_position_ && !bonus_spawn_pending_ && apples_since_last_bonus_ >= bonus_required_apples_)
+	{
+		bonus_spawn_pending_ = true;
+	}
+}
+
+bool Game::should_spawn_bonus() const
+{
+	return bonus_spawn_pending_ && !bonus_position_;
+}
+
+void Game::bonus_spawned(const Coord& position)
+{
+	bonus_position_ = position;
+	bonus_spawn_pending_ = false;
+	bonus_timer_ = BONUS_DURATION_SECONDS;
+	apples_since_last_bonus_ = 0;
+}
+
+void Game::on_bonus_collected()
+{
+	if (!bonus_position_)
+	{
+		return;
+	}
+
+	const float remaining_time = std::max(0.0f, bonus_timer_);
+	const int bonus_score = static_cast<int>(std::lround(static_cast<double>(remaining_time) * 5.0));
+	score_ += bonus_score;
+
+	bonus_position_.reset();
+	bonus_timer_ = 0.0f;
+	bonus_required_apples_ = BONUS_REDUCED_THRESHOLD;
+	bonus_spawn_pending_ = false;
+	apples_since_last_bonus_ = 0;
+}
+
+bool Game::has_active_bonus() const
+{
+	return bonus_position_.has_value();
+}
+
+std::optional<Coord> Game::get_bonus_position() const
+{
+	return bonus_position_;
+}
+
+float Game::get_bonus_time_remaining() const
+{
+	if (!bonus_position_)
+	{
+		return 0.0f;
+	}
+
+	return std::max(0.0f, bonus_timer_);
+}
+
 void Game::process_events()
 {
 	while (auto key = poll_key_event())
@@ -91,6 +160,20 @@ void Game::process_events()
 
 void Game::update()
 {
+	auto now = std::chrono::steady_clock::now();
+	float delta_seconds = 0.0f;
+	if (first_update_)
+	{
+		first_update_ = false;
+	}
+	else
+	{
+		delta_seconds = std::chrono::duration<float>(now - last_update_time_).count();
+	}
+	last_update_time_ = now;
+
+	update_bonus_timer(delta_seconds);
+
 	if (state_)
 	{
 		state_->update(this);
@@ -103,4 +186,43 @@ void Game::render()
 	{
 		state_->draw(this);
 	}
+}
+
+void Game::reset_progress()
+{
+	score_ = 0;
+	total_apples_collected_ = 0;
+	apples_since_last_bonus_ = 0;
+	bonus_required_apples_ = BONUS_DEFAULT_THRESHOLD;
+	bonus_spawn_pending_ = false;
+	bonus_timer_ = 0.0f;
+	bonus_position_.reset();
+	last_update_time_ = std::chrono::steady_clock::now();
+	first_update_ = true;
+}
+
+void Game::update_bonus_timer(float delta_seconds)
+{
+	if (!bonus_position_ || delta_seconds <= 0.0f)
+	{
+		return;
+	}
+
+	bonus_timer_ = std::max(0.0f, bonus_timer_ - delta_seconds);
+	if (bonus_timer_ <= 0.0f)
+	{
+		bonus_position_.reset();
+		bonus_timer_ = 0.0f;
+		bonus_required_apples_ = BONUS_DEFAULT_THRESHOLD;
+		bonus_spawn_pending_ = false;
+		if (apples_since_last_bonus_ >= bonus_required_apples_)
+		{
+			bonus_spawn_pending_ = true;
+		}
+	}
+}
+
+Mode Game::get_mode()
+{
+	return mode_;
 }
