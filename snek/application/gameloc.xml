@@ -1,0 +1,3418 @@
+<loc>
+    <language lang="us">
+        <game_name>snake</game_name>
+        <text_language>language</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>yes</text_yes>
+        <text_no>no</text_no>
+        <press_5>press 5 to continue</press_5>
+        <text_play>play</text_play>
+        <text_sound_on>sound: on</text_sound_on>
+        <text_sound_off>sound: off</text_sound_off>
+        <text_help>help</text_help>
+        <text_exit>exit</text_exit>
+        <confirm_mm>do you want to go back to the main menu?</confirm_mm>
+        <confirm_qq>do you want to exit the game?</confirm_qq>
+        <confirm_restart>do you want to restart?</confirm_restart>
+        <text_level>level</text_level>
+        <title_in_game_menu>in-game menu</title_in_game_menu>
+        <text_resume>resume</text_resume>
+        <text_restart>restart</text_restart>
+        <text_main_menu>main menu</text_main_menu>
+        <customer_care>customer care</customer_care>
+        <text_survival>survival</text_survival>
+        <text_about>about</text_about>
+        <text_controls>controls</text_controls>
+        <text_colours>colors</text_colours>
+        <title_power_ups>power-ups</title_power_ups>
+        <title_leaderboard>leaderboard</title_leaderboard>
+        <text_difficult>difficulty</text_difficult>
+        <text_diff_1>easy</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>hard</text_diff_3>
+        <text_settings>settings</text_settings>
+        <next_level>next level</next_level>
+        <new_record>congratulations!
+new record</new_record>
+        <tutorial_control>select a control scheme and enjoy the game. you can change the controls in the options menu.</tutorial_control>
+        <tutorial_color>choose your color. you can change the colors in the options menu.</tutorial_color>
+        <credits_01>\1snake*
+version x.x.x
+© 2019 gameloft.
+
+all rights reserved. gameloft and the gameloft logo are trademarks of gameloft in the u.s. and/or other countries.
+
+\1info and customer care:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1studio manager*
+phung viet hung
+
+\1deployment managers*
+alain etienne
+ngo thai duy
+
+\1creative director*
+stefan zamfir</credits_02>
+        <credits_03>\1executive producers*
+aurelien lavaud
+truong cong hieu
+
+\1producers*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1lead game designers*
+nguyen quoc dong
+mai anh duc
+
+\1game designers*
+maxime weets
+ho dac the
+
+\1artists*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1lead programmers*
+ly hoang trung
+nguyen nguyen vu
+
+\1programmers*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1qa project managers*
+pham thi van an
+ly duc an
+
+\1qa*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1audio director*
+jorge peirano
+
+\1world audio producer*
+ulrich frantz
+
+\1lead sound technician*
+ tran nhat thai tung
+
+\1sound technicians*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1localization manager*
+alexis green-painchaud
+
+\1localization coordinators*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localization*
+owen weiss
+timothy leclair
+angela roberts
+chelsey lam
+elona ritchie</credits_09>
+        <help_page_1>2: move up
+4: move left
+6: move right
+8: move down
+
+the game can also be played entirely with the d-pad.
+</help_page_1>
+        <help_page_2>corresponding controls
+2 = d-pad up
+4 = d-pad left
+6 = d-pad right
+8 = d-pad down</help_page_2>
+        <help_page_3>if you want your snake to be more colorful, you can change its color in the options menu.</help_page_3>
+        <help_page_4>increases the score and makes the snake grow longer.</help_page_4>
+        <help_page_5>be careful!!! if the snake eats a bomb, you'll lose.</help_page_5>
+        <help_page_6>helps the snake collect apples more easily.</help_page_6>
+        <help_page_7>there are 2 different multipliers: x2 and x4. they will help the snake get more points when it eats an apple.</help_page_7>
+        <help_page_8>shrinks the snake to half its size and greatly reduces its speed.</help_page_8>
+        <help_page_9>the snake will become invincible and be able to break through walls.</help_page_9>
+        <level_unlock_description>you need ^ ‰\d to unlock this level.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>timed challenge</level_title_1>
+        <level1_description_01>goal: eat as many apples as possible before time runs out. \2you must eat at least 10 apples.*
+
+hint: hitting your own tail will make you lose, but hitting the edge of the screen will not.</level1_description_01>
+        <level1_description_02>goal: eat as many apples as possible before time runs out. \2you must eat at least 10 apples.*
+
+hint: hitting walls and your own tail will make you lose, but hitting the edge of the screen will not.</level1_description_02>
+        <level1_description_03>goal: eat as many apples as possible before time runs out. \2you must eat at least 10 apples.*
+
+hint: hitting walls and your own tail will make you lose, but hitting the edge of the screen will not.</level1_description_03>
+        <level_title_2>horizontal challenge</level_title_2>
+        <level2_description_01>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 4 apples to open it!*
+
+hint: avoid all types of walls.</level2_description_01>
+        <level2_description_02>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 6 apples to open it!*
+
+hint: avoid all types of walls.</level2_description_02>
+        <level2_description_03>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 6 apples to open it!*
+
+hint: avoid all types of walls.</level2_description_03>
+        <level_title_3>snake vs. snake timed challenge</level_title_3>
+        <level3_description_01>goal: eat more apples than your opponent before time runs out.
+
+hint: you can overlap your opponent safely.</level3_description_01>
+        <level3_description_02>goal: eat more apples than your opponent before time runs out.
+
+hint: you can overlap your opponent safely. watch out for walls.</level3_description_02>
+        <level3_description_03>goal: eat more apples than your opponent before time runs out.
+
+hint: you can overlap your opponent safely. watch out for walls.</level3_description_03>
+        <level_title_4>vertical challenge</level_title_4>
+        <level4_description_01>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 8 apples to open it!*
+
+hint: avoid all types of walls.</level4_description_01>
+        <level4_description_02>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 8 apples to open it!*
+
+hint: avoid all types of walls.</level4_description_02>
+        <level4_description_03>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 9 apples to open it!*
+
+hint: avoid all types of walls.</level4_description_03>
+        <level_title_5>timed challenge with power-ups</level_title_5>
+        <level5_description_01>use the power-ups to eat as many apples as possible before time runs out. \2you must eat at least 20 apples.*
+
+hint: hitting your own tail will make you lose, but hitting the edge of the screen will not. watch out for bombs.</level5_description_01>
+        <level5_description_02>use the power-ups to eat as many apples as possible before time runs out. \2you must eat at least 25 apples.*
+
+hint: hitting your own tail will make you lose, but hitting the edge of the screen will not. watch out for bombs and walls.</level5_description_02>
+        <level5_description_03>use the power-ups to eat as many apples as possible before time runs out. \2you must eat at least 25 apples.*
+
+hint: hitting your own tail will make you lose, but hitting the edge of the screen will not. watch out for bombs and walls.</level5_description_03>
+        <level_title_6>vertical challenge</level_title_6>
+        <level6_description_01>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 7 apples to open it!*
+
+hint: power-ups can help.</level6_description_01>
+        <level6_description_02>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 8 apples to open it!*
+
+hint: power-ups can help.</level6_description_02>
+        <level6_description_03>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 10 apples to open it!*
+
+hint: power-ups can help.</level6_description_03>
+        <level_title_7>snake vs. snake timed challenge with power-ups</level_title_7>
+        <level7_description_01>use the power-ups to eat more apples than your opponent before time runs out.
+
+hint: you can safely overlap your opponent.</level7_description_01>
+        <level7_description_02>use the power-ups to eat more apples than your opponent before time runs out.
+
+hint: you can safely overlap your opponent. watch out for walls.</level7_description_02>
+        <level7_description_03>use the power-ups to eat more apples than your opponent before time runs out.
+
+hint: you can safely overlap your opponent. watch out for walls.</level7_description_03>
+        <level_title_8>horizontal challenge</level_title_8>
+        <level8_description_01>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 8 apples to open it!*
+
+hint: avoid all types of walls.</level8_description_01>
+        <level8_description_02>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 8 apples to open it!*
+
+hint: avoid all types of walls.</level8_description_02>
+        <level8_description_03>target: reach the end of the level by eating enough apples to open the gate. \2eat at least 9 apples to open it!*
+
+hint: avoid all types of walls.</level8_description_03>
+        <level_title_9>snake vs. snake timed challenge with power-ups</level_title_9>
+        <level9_description_01>use the power-ups to eat more apples than your opponent before time runs out. \2you must eat at least 25 apples.*
+
+hint: you can safely overlap your opponent.</level9_description_01>
+        <level9_description_02>use the power-ups to eat more apples than your opponent before time runs out. \2you must eat at least 25 apples.*
+
+hint: you can safely overlap your opponent. watch out for walls.</level9_description_02>
+        <level9_description_03>use the power-ups to eat more apples than your opponent before time runs out. \2you must eat at least 30 apples.*
+
+hint: you can safely overlap your opponent. watch out for walls.</level9_description_03>
+        <survivalmode_description>try to survive and get as many apples as you can.
+
+be careful!
+after a while, bombs and walls will appear randomly.</survivalmode_description>
+        <leaderboard_your_score>your score: </leaderboard_your_score>
+        <finish_all_level>congratulations! you've finished all the levels.</finish_all_level>
+        <win>victory!</win>
+        <lose_score>you need more apples!</lose_score>
+        <lose_hit_the_bomb>don't eat the bomb!</lose_hit_the_bomb>
+        <lose_hit_the_wall>don't hit the wall!</lose_hit_the_wall>
+        <lose_hit_body>don't eat your body!</lose_hit_body>
+        <lose_hit_the_door>you need more apples!</lose_hit_the_door>
+        <unlocked_door>gate unlocked!</unlocked_door>
+        <pop_up_next_level_description_1>back to level selection</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>go to next difficulty</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>go to next level</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>not enough ^</pop_up_next_level_description_4>
+        <leaderboard_you>you</leaderboard_you>
+        <description_java>the legendary snake is back with a little update that makes it even more fun to play on a color screen.</description_java>
+        <enable_sound>do you want sound?</enable_sound>
+    </language>
+    <language lang="fr">
+        <game_name>snake</game_name>
+        <text_language>langue</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>oui</text_yes>
+        <text_no>non</text_no>
+        <press_5>appuie sur 5 pour continuer</press_5>
+        <text_play>jouer</text_play>
+        <text_sound_on>son : oui</text_sound_on>
+        <text_sound_off>son : non</text_sound_off>
+        <text_help>aide</text_help>
+        <text_exit>quitter</text_exit>
+        <confirm_mm>retourner au menu principal ?</confirm_mm>
+        <confirm_qq>quitter le jeu ?</confirm_qq>
+        <confirm_restart>recommencer ?</confirm_restart>
+        <text_level>niveau</text_level>
+        <title_in_game_menu>menu de pause</title_in_game_menu>
+        <text_resume>reprendre</text_resume>
+        <text_restart>recommencer</text_restart>
+        <text_main_menu>menu principal</text_main_menu>
+        <customer_care>service client</customer_care>
+        <text_survival>survie</text_survival>
+        <text_about>à propos</text_about>
+        <text_controls>commandes</text_controls>
+        <text_colours>couleurs</text_colours>
+        <title_power_ups>power-ups</title_power_ups>
+        <title_leaderboard>classement</title_leaderboard>
+        <text_difficult>difficulté</text_difficult>
+        <text_diff_1>facile</text_diff_1>
+        <text_diff_2>normale</text_diff_2>
+        <text_diff_3>difficile</text_diff_3>
+        <text_settings>réglages</text_settings>
+        <next_level>niveau suivant</next_level>
+        <new_record>félicitations !
+nouveau record</new_record>
+        <tutorial_control>sélectionne une configuration de commandes et amuse-toi. tu peux modifier les commandes dans le menu options.</tutorial_control>
+        <tutorial_color>choisis ta couleur. tu peux changer les couleurs dans le menu options.</tutorial_color>
+        <credits_01>\1snake*
+version x.x.x
+© 2019 gameloft.
+
+tous droits réservés. gameloft et le logo gameloft sont des marques déposées de gameloft aux états-unis et/ou dans d'autres pays.
+
+\1info et service client :*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1manager studio*
+phung viet hung
+
+\1managers déploiement*
+alain etienne
+ngo thai duy
+
+\1directeur créatif*
+stefan zamfir</credits_02>
+        <credits_03>\1producteurs exécutifs*
+aurelien lavaud
+truong cong hieu
+
+\1producteurs*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1chefs game design*
+nguyen quoc dong
+mai anh duc
+
+\1game design*
+maxime weets
+ho dac the
+
+\1graphistes* 
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1chefs programmeurs*
+ly hoang trung
+nguyen nguyen vu
+
+\1programmeurs*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1managers de projet cq*
+pham thi van an
+ly duc an
+
+\1cq*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1directeur audio*
+jorge peirano
+
+\1producteur audio monde*
+ulrich frantz
+
+\1chef technicien son*
+ tran nhat thai tung
+
+\1techniciens son*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1manager localisation*
+alexis green-painchaud
+
+\1coordinateurs localisation*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localisation*
+jean-baptise signard
+david hardy
+viviane descombes
+romain meilhon
+chloé bury</credits_09>
+        <help_page_1>2 : se déplacer vers le haut
+4 : se déplacer à gauche
+6 : se déplacer à droite
+8 : se déplacer vers le bas
+
+tu peux également jouer avec le d-pad.
+
+</help_page_1>
+        <help_page_2>commandes correspondantes
+2 = d-pad haut
+4 = d-pad gauche
+6 = d-pad droite
+8 = d-pad bas</help_page_2>
+        <help_page_3>si tu préfères un serpent plus coloré, tu peux changer sa couleur dans le menu options.</help_page_3>
+        <help_page_4>améliore le score et allonge le serpent.</help_page_4>
+        <help_page_5>attention !! si le serpent mange une bombe, tu perds !</help_page_5>
+        <help_page_6>aide le serpent à récupérer des pommes plus facilement.</help_page_6>
+        <help_page_7>il existe 2 types de multiplicateurs : x 2 et x 4. ils permettent au serpent d'obtenir plus de points en mangeant une pomme.</help_page_7>
+        <help_page_8>réduit la taille du serpent de moitié et réduit fortement sa vitesse.</help_page_8>
+        <help_page_9>le serpent devient invincible et capable de franchir les murs.</help_page_9>
+        <level_unlock_description>tu as besoin de ^ ‰\d pour débloquer ce niveau.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>défi chrono</level_title_1>
+        <level1_description_01>objectif : mange le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 10 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet.</level1_description_01>
+        <level1_description_02>objectif : mange le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 10 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet.</level1_description_02>
+        <level1_description_03>objectif : mange le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 10 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet.</level1_description_03>
+        <level_title_2>défi horizontal</level_title_2>
+        <level2_description_01>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 4 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level2_description_01>
+        <level2_description_02>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 6 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level2_description_02>
+        <level2_description_03>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 6 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level2_description_03>
+        <level_title_3>défi chrono serpent contre serpent</level_title_3>
+        <level3_description_01>objectif : mange plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger.</level3_description_01>
+        <level3_description_02>objectif : mange plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.</level3_description_02>
+        <level3_description_03>objectif : mange plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.</level3_description_03>
+        <level_title_4>défi vertical</level_title_4>
+        <level4_description_01>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 8 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level4_description_01>
+        <level4_description_02>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 8 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level4_description_02>
+        <level4_description_03>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 9 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level4_description_03>
+        <level_title_5>défi chrono avec power-ups</level_title_5>
+        <level5_description_01>utilise les power-ups pour manger le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 20 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet. attention aux bombes.</level5_description_01>
+        <level5_description_02>utilise les power-ups pour manger le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 25 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet. attention aux bombes et aux murs.</level5_description_02>
+        <level5_description_03>utilise les power-ups pour manger le plus de pommes possible avant la fin du temps imparti. \2tu dois manger au moins 25 pommes.*
+
+astuce : tu perdras si tu touches ta propre queue, mais toucher le bord de l'écran n'aura aucun effet. attention aux bombes et aux murs.</level5_description_03>
+        <level_title_6>défi vertical</level_title_6>
+        <level6_description_01>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 7 pommes pour l'ouvrir !*
+
+astuce : les power-ups peuvent t'aider.</level6_description_01>
+        <level6_description_02>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 8 pommes pour l'ouvrir !*
+
+astuce : les power-ups peuvent t'aider.</level6_description_02>
+        <level6_description_03>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 10 pommes pour l'ouvrir !*
+
+astuce : les power-ups peuvent t'aider.</level6_description_03>
+        <level_title_7>défi chrono serpent contre serpent avec power-ups</level_title_7>
+        <level7_description_01>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger.
+</level7_description_01>
+        <level7_description_02>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.
+</level7_description_02>
+        <level7_description_03>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti.
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.
+</level7_description_03>
+        <level_title_8>défi horizontal</level_title_8>
+        <level8_description_01>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 8 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level8_description_01>
+        <level8_description_02>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 8 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level8_description_02>
+        <level8_description_03>objectif : atteins la fin du niveau en mangeant suffisamment de pommes pour ouvrir la porte. \2mange au moins 9 pommes pour l'ouvrir !*
+
+astuce : évite tous les types de murs.</level8_description_03>
+        <level_title_9>défi chrono serpent contre serpent avec power-ups</level_title_9>
+        <level9_description_01>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti. \2tu dois manger au moins 25 pommes.*
+
+astuce : tu peux chevaucher ton adversaire sans danger.</level9_description_01>
+        <level9_description_02>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti. \2tu dois manger au moins 25 pommes.*
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.</level9_description_02>
+        <level9_description_03>utilise les power-ups pour manger plus de pommes que ton adversaire avant la fin du temps imparti. \2tu dois manger au moins 30 pommes.*
+
+astuce : tu peux chevaucher ton adversaire sans danger. attention aux murs.</level9_description_03>
+        <survivalmode_description>essaie de survivre et d'obtenir le plus de pommes possible.
+
+mais attention !
+après un moment, des bombes et des murs vont apparaître au hasard.</survivalmode_description>
+        <leaderboard_your_score>ton score : </leaderboard_your_score>
+        <finish_all_level>félicitations ! tu as fini tous les niveaux.</finish_all_level>
+        <win>victoire !</win>
+        <lose_score>il te faut plus de pommes !</lose_score>
+        <lose_hit_the_bomb>ne mange pas les bombes !</lose_hit_the_bomb>
+        <lose_hit_the_wall>ne touche pas le mur !</lose_hit_the_wall>
+        <lose_hit_body>ne mange pas ton corps !</lose_hit_body>
+        <lose_hit_the_door>il te faut plus de pommes !</lose_hit_the_door>
+        <unlocked_door>porte débloquée !</unlocked_door>
+        <pop_up_next_level_description_1>retour sélection niveaux</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>passer à la difficulté suivante</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>passer au niveau suivant</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>pas assez de ^</pop_up_next_level_description_4>
+        <leaderboard_you>toi</leaderboard_you>
+        <description_java>le serpent légendaire est de retour avec une petite mise à jour pour un jeu encore plus amusant sur écran couleur.</description_java>
+        <enable_sound>activer le son ?</enable_sound>
+    </language>
+    <language lang="de">
+        <game_name>snake</game_name>
+        <text_language>sprache</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>ja</text_yes>
+        <text_no>nein</text_no>
+        <press_5>drücke 5, um fortzufahren</press_5>
+        <text_play>spielen</text_play>
+        <text_sound_on>ton: an</text_sound_on>
+        <text_sound_off>ton: aus</text_sound_off>
+        <text_help>hilfe</text_help>
+        <text_exit>beenden</text_exit>
+        <confirm_mm>möchtest du zum hauptmenü zurückkehren?</confirm_mm>
+        <confirm_qq>möchtest du das spiel beenden?</confirm_qq>
+        <confirm_restart>willst du neu starten?</confirm_restart>
+        <text_level>level</text_level>
+        <title_in_game_menu>spiel-menü</title_in_game_menu>
+        <text_resume>fortsetzen</text_resume>
+        <text_restart>neustart</text_restart>
+        <text_main_menu>hauptmenü</text_main_menu>
+        <customer_care>kundenbetreuung</customer_care>
+        <text_survival>überleben</text_survival>
+        <text_about>spielinfos</text_about>
+        <text_controls>steuerung</text_controls>
+        <text_colours>farben</text_colours>
+        <title_power_ups>extras</title_power_ups>
+        <title_leaderboard>bestenliste</title_leaderboard>
+        <text_difficult>niveau</text_difficult>
+        <text_diff_1>leicht</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>schwer</text_diff_3>
+        <text_settings>einstellungen</text_settings>
+        <next_level>nächster level</next_level>
+        <new_record>glückwunsch!
+neuer rekord</new_record>
+        <tutorial_control>wähle eine steuerungsart und geniesse das spiel. du kannst die steuerung in den optionen ändern.</tutorial_control>
+        <tutorial_color>wähle deine farbe. du kannst die farben in den optionen ändern.</tutorial_color>
+        <credits_01>\1snake*
+version x.x.x
+© 2019 gameloft
+
+alle rechte vorbehalten. gameloft und das gameloft-logo sind marken von gameloft in den usa und/oder anderen ländern. 
+
+\1infos und kundenbetreuung:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1studiomanager*
+phung viet hung
+
+\1manager deployment*
+alain etienne
+ngo thai duy
+
+\1creative director*
+stefan zamfir</credits_02>
+        <credits_03>\1ausführende produzenten*
+aurelien lavaud
+truong cong hieu
+
+\1produktion*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1leitung spieldesign*
+nguyen quoc dong
+mai anh duc
+
+\1spieldesign*
+maxime weets
+ho dac the
+
+\1grafik*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1leitung programmierung*
+ly hoang trung
+nguyen nguyen vu
+
+\1programmierung*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1projektmanager qs*
+pham thi van an
+ly duc an
+
+\1qs*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1direktor sounddesign*
+jorge peirano
+
+\1produzent sound - welt*
+ulrich frantz
+
+\1leitung tontechnik*
+ tran nhat thai tung
+
+\1tontechnik*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1manager lokalisierung*
+alexis green-painchaud
+
+koordination lokalisierung
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1lokalisierung*
+frank schneidawind
+anna hoppe
+marisa gref
+oskar matzke
+norbert bäck</credits_09>
+        <help_page_1>2: nach oben
+4: nach links
+6: nach rechts
+8: nach unten
+
+das spiel kann auch ausschliesslich mit dem steuerkreuz gespielt werden.
+
+</help_page_1>
+        <help_page_2>entsprechende steuerung
+2= steuerkreuz-oben
+4 = steuerkreuz-links
+6 = steuerkreuz-rechts
+8= steuerkreuz-unten</help_page_2>
+        <help_page_3>wenn du eine farbenfrohere schlange willst, kannst du ihre farbe in den optionen ändern.</help_page_3>
+        <help_page_4>erhöht die punktzahl und lässt die schlange länger werden.</help_page_4>
+        <help_page_5>sei vorsichtig!! wenn die schlange eine bombe frisst, verlierst du.</help_page_5>
+        <help_page_6>hilft der schlange, einfacher äpfel zu sammeln.</help_page_6>
+        <help_page_7>es gibt 2 verschiedene multiplikatoren: x2 und x4. sie helfen der schlange, mehr punkte zu erhalten, wenn sie einen apfel frisst. </help_page_7>
+        <help_page_8>verkleinert die schlange auf die hälfte ihrer länge und verringert ihr tempo stark.</help_page_8>
+        <help_page_9>die schlange wird unbesiegbar und kann wände durchbrechen.</help_page_9>
+        <level_unlock_description>du brauchst  ^ ‰\d, um diesen level freizuschalten.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>zeit-herausforderung</level_title_1>
+        <level1_description_01>ziel: iss so viele äpfel wie möglich, bevor die zeit abläuft.\2 du musst mindestens 10 äpfel essen.*
+
+tipp: beim berühren deines schwanzes verlierst du, beim berühren des bildschirmrands jedoch nicht.</level1_description_01>
+        <level1_description_02>ziel: iss so viele äpfel wie möglich, bevor die zeit abläuft. \2du musst mindestens 10 äpfel essen.*
+
+tipp: beim berühren von mauern und deinem schwanz verlierst du, beim berühren des bildschirmrands jedoch nicht.</level1_description_02>
+        <level1_description_03>ziel: iss so viele äpfel wie möglich, bevor die zeit abläuft. \2du musst mindestens 10 äpfel essen.*
+
+tipp: beim berühren von mauern und deinem schwanz verlierst du, beim berühren des bildschirmrands jedoch nicht</level1_description_03>
+        <level_title_2>horizontale herausforderung</level_title_2>
+        <level2_description_01>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 4 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level2_description_01>
+        <level2_description_02>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 6 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level2_description_02>
+        <level2_description_03>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 6 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level2_description_03>
+        <level_title_3>zeit-herausforderung - schlange gegen schlange</level_title_3>
+        <level3_description_01>ziel: iss mehr äpfel als dein gegner, bevor die zeit abläuft.
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden.</level3_description_01>
+        <level3_description_02>ziel: iss mehr äpfel als dein gegner, bevor die zeit abläuft.
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level3_description_02>
+        <level3_description_03>ziel: iss mehr äpfel als dein gegner, bevor die zeit abläuft.
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level3_description_03>
+        <level_title_4>vertikale herausforderung</level_title_4>
+        <level4_description_01>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 8 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level4_description_01>
+        <level4_description_02>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 8 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level4_description_02>
+        <level4_description_03>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 9 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level4_description_03>
+        <level_title_5>zeit-herausforderung mit extras</level_title_5>
+        <level5_description_01>benutze die extras, um so viele äpfel wie möglich zu essen, bevor die zeit abläuft. \2du musst mindestens 20 äpfel essen.*
+
+tipp: beim berühren deines schwanzes verlierst du, beim berühren des bildschirmrands jedoch nicht.</level5_description_01>
+        <level5_description_02>benutze die extras, um so viele äpfel wie möglich zu essen, bevor die zeit abläuft. \2du musst mindestens 25 äpfel essen.*
+
+tipp: beim berühren deines schwanzes verlierst du, beim berühren des bildschirmrands jedoch nicht. vorsicht vor bomben und mauern.</level5_description_02>
+        <level5_description_03>benutze die extras, um so viele äpfel wie möglich zu essen, bevor die zeit abläuft. \2du musst mindestens 25 äpfel essen.*
+
+tipp: beim berühren deines schwanzes verlierst du, beim berühren des bildschirmrands jedoch nicht. vorsicht vor bomben und mauern.</level5_description_03>
+        <level_title_6>vertikale herausforderung</level_title_6>
+        <level6_description_01>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 7 äpfel essen!*
+
+hinweis: extras können dir behilflich sein.</level6_description_01>
+        <level6_description_02>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 8 äpfel essen!*
+
+hinweis: extras können dir behilflich sein.</level6_description_02>
+        <level6_description_03>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 10 äpfel essen!*
+
+hinweis: extras können dir behilflich sein.</level6_description_03>
+        <level_title_7>zeit-herausforderung - schlange gegen schlange mit extras</level_title_7>
+        <level7_description_01>benutze die extras, um mehr äpfel als dein gegner zu essen, bevor die zeit abläuft.
+
+tipp: du kannst deinen gegner gefahrlos überschneiden.</level7_description_01>
+        <level7_description_02>benutze die extras, um mehr äpfel als dein gegner zu essen, bevor die zeit abläuft.
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level7_description_02>
+        <level7_description_03>benutze die extras, um mehr äpfel als dein gegner zu essen, bevor die zeit abläuft.
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level7_description_03>
+        <level_title_8>horizontale herausforderung</level_title_8>
+        <level8_description_01>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 8 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level8_description_01>
+        <level8_description_02>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 8 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level8_description_02>
+        <level8_description_03>ziel: erreiche das ende des levels, indem du genug äpfel isst, um das tor zu öffnen. \2dafür musst du mindestens 9 äpfel essen!*
+
+hinweis: vermeide den kontakt mit allen arten von mauern.</level8_description_03>
+        <level_title_9>zeit-herausforderung - schlange gegen schlange mit extras</level_title_9>
+        <level9_description_01>benutze die extras, um mehr äpfel als dein gegner zu fressen, bevor die zeit abläuft. \2du musst mindestens 25 äpfel fressen.*
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden.</level9_description_01>
+        <level9_description_02>benutze die extras, um mehr äpfel als dein gegner zu fressen, bevor die zeit abläuft. \2du musst mindestens 25 äpfel fressen.*
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level9_description_02>
+        <level9_description_03>benutze die extras, um mehr äpfel als dein gegner zu fressen, bevor die zeit abläuft. \2du musst mindestens 30 äpfel fressen.*
+
+tipp: du kannst dich mit deinem gegner gefahrlos überschneiden. vorsicht vor mauern.</level9_description_03>
+        <survivalmode_description>versuche zu überleben und so viele äpfel wie möglich zu erhalten.
+
+vorsicht!
+nach einer weile erscheinen zufällig bomben und wände.</survivalmode_description>
+        <leaderboard_your_score>deine punktzahl: </leaderboard_your_score>
+        <finish_all_level>glückwunsch! du hast alle level beendet.</finish_all_level>
+        <win>du hast gewonnen!</win>
+        <lose_score>du brauchst mehr äpfel!</lose_score>
+        <lose_hit_the_bomb>iss nicht die bombe!</lose_hit_the_bomb>
+        <lose_hit_the_wall>berühre nicht die mauer!</lose_hit_the_wall>
+        <lose_hit_body>friss nicht deinen eigenen körper!</lose_hit_body>
+        <lose_hit_the_door>du brauchst mehr äpfel!</lose_hit_the_door>
+        <unlocked_door>tor entriegelt!</unlocked_door>
+        <pop_up_next_level_description_1>zurück zur levelwahl</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>zum nächsten niveau</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>zum nächsten level</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>nicht genug ^</pop_up_next_level_description_4>
+        <leaderboard_you>du</leaderboard_you>
+        <description_java>die legendäre schlange ist mit einem kleinen update zurück, mit dem das spielen auf dem farbbildschirm noch mehr spass macht.</description_java>
+        <enable_sound>sound aktivieren?</enable_sound>
+    </language>
+    <language lang="es">
+        <game_name>snake</game_name>
+        <text_language>idioma</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>sí</text_yes>
+        <text_no>no</text_no>
+        <press_5>pulsa 5 para continuar</press_5>
+        <text_play>jugar</text_play>
+        <text_sound_on>sonido: sí</text_sound_on>
+        <text_sound_off>sonido: no</text_sound_off>
+        <text_help>ayuda</text_help>
+        <text_exit>salir</text_exit>
+        <confirm_mm>¿quieres volver al menú inicial?</confirm_mm>
+        <confirm_qq>¿quieres salir del juego?</confirm_qq>
+        <confirm_restart>¿quieres reiniciar?</confirm_restart>
+        <text_level>nivel</text_level>
+        <title_in_game_menu>menú del juego</title_in_game_menu>
+        <text_resume>reanudar</text_resume>
+        <text_restart>reiniciar</text_restart>
+        <text_main_menu>menú inicial</text_main_menu>
+        <customer_care>atención al cliente</customer_care>
+        <text_survival>supervivencia</text_survival>
+        <text_about>acerca de</text_about>
+        <text_controls>controles</text_controls>
+        <text_colours>colores</text_colours>
+        <title_power_ups>potenciadores</title_power_ups>
+        <title_leaderboard>clasificación</title_leaderboard>
+        <text_difficult>dificultad</text_difficult>
+        <text_diff_1>fácil</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>difícil</text_diff_3>
+        <text_settings>ajustes</text_settings>
+        <next_level>siguiente nivel</next_level>
+        <new_record>¡enhorabuena!
+nuevo récord</new_record>
+        <tutorial_control>elige un sistema de control y disfruta del juego. puedes cambiar los controles en el menú de opciones.</tutorial_control>
+        <tutorial_color>elige tu color. puedes cambiar los colores en el menú de opciones.</tutorial_color>
+        <credits_01>\1snake*
+versión x.x.x
+© 2019 gameloft.
+
+todos los derechos reservados. gameloft y el logotipo de gameloft son marcas registradas de gameloft en ee. uu. y/u otros países.
+
+\1información y atención
+al cliente:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1mánager del estudio*
+phung viet hung
+
+\1mánager de despliegue*
+alain etienne
+ngo thai duy
+
+\1dirección creativa*
+stefan zamfir</credits_02>
+        <credits_03>\1producción ejecutiva*
+aurelien lavaud
+truong cong hieu
+
+\1producción*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1jefes de diseño del juego*
+nguyen quoc dong
+mai anh duc
+
+\1diseño del juego*
+maxime weets
+ho dac the
+
+\1arte*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1jefes de programación*
+ly hoang trung
+nguyen nguyen vu
+
+\1programación*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1mánager de gestión de calidad*
+del proyecto
+pham thi van an
+ly duc an
+
+\1gestión de calidad*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1dirección de audio*
+jorge peirano
+
+\1producción internacional de audio*
+ulrich frantz
+
+\1jefe técnico de sonido*
+tran nhat thai tung
+
+\1técnicos de sonido*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1mánager de localización*
+alexis green-painchaud
+
+\1coordinación de localización*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localización*
+israel pastor
+pau cortés
+sergio lópez
+henar pardo
+pilar gómez</credits_09>
+        <help_page_1>2: mover hacia arriba
+4: mover hacia la izquierda
+6: mover hacia la derecha
+8: mover hacia abajo
+
+también puedes jugar con el pad direccional.
+
+</help_page_1>
+        <help_page_2>controles correspondientes
+2 = pad direc. arriba
+4 = pad direc. izquierda
+6 = pad direc. derecha
+8 = pad direc. abajo</help_page_2>
+        <help_page_3>si quieres que tu serpiente sea más colorida, puedes cambiar su color en el menú de opciones.</help_page_3>
+        <help_page_4>aumenta la puntuación y hace que la serpiente crezca.</help_page_4>
+        <help_page_5>¡ten cuidado! si la serpiente se come una bomba, pierdes.</help_page_5>
+        <help_page_6>ayuda a la serpiente a reunir manzanas más fácilmente.</help_page_6>
+        <help_page_7>hay 2 multiplicadores diferentes: x2 y x4. ayudarán a la serpiente a conseguir más puntos cuando coma una manzana.</help_page_7>
+        <help_page_8>reduce la serpiente a la mitad de su tamaño y reduce también su velocidad.</help_page_8>
+        <help_page_9>la serpiente será invencible y podrá atravesar paredes.</help_page_9>
+        <level_unlock_description>necesitas ^ ‰\d para desbloquear este nivel.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>desafío cronometrado</level_title_1>
+        <level1_description_01>objetivo: come tantas manzanas como puedas antes de que se acabe el tiempo. \2debes comer al menos 10 manzanas.*
+
+consejo: si te chocas con tu propia cola, perderás; si te chocas con el borde de la pantalla, no.</level1_description_01>
+        <level1_description_02>objetivo: come tantas manzanas como puedas antes de que se acabe el tiempo. \2debes comer al menos 10 manzanas.*
+
+consejo: si te chocas con tu propia cola o con las paredes, perderás; si te chocas con el borde de la pantalla, no.</level1_description_02>
+        <level1_description_03>objetivo: come tantas manzanas como puedas antes de que se acabe el tiempo. \2debes comer al menos 10 manzanas.*
+
+consejo: si te chocas con tu propia cola o con las paredes, perderás; si te chocas con el borde de la pantalla, no.</level1_description_03>
+        <level_title_2>desafío horizontal</level_title_2>
+        <level2_description_01>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 4 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level2_description_01>
+        <level2_description_02>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 6 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level2_description_02>
+        <level2_description_03>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 6 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level2_description_03>
+        <level_title_3>desafío cronometrado, serpiente vs. serpiente</level_title_3>
+        <level3_description_01>objetivo: come más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema</level3_description_01>
+        <level3_description_02>objetivo: come más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level3_description_02>
+        <level3_description_03>objetivo: come más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level3_description_03>
+        <level_title_4>desafío vertical</level_title_4>
+        <level4_description_01>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 8 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level4_description_01>
+        <level4_description_02>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 8 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level4_description_02>
+        <level4_description_03>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 9 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level4_description_03>
+        <level_title_5>desafío cronometrado con potenciadores</level_title_5>
+        <level5_description_01>usa los potenciadores para comerte todas las manzanas que puedas antes de que se acabe el tiempo. \2debes comer al menos 20 manzanas.*
+
+consejo: si te chocas con tu propia cola, perderás; si te chocas con el borde de la pantalla, no. cuidado con las bombas.</level5_description_01>
+        <level5_description_02>usa los potenciadores para comerte todas las manzanas que puedas antes de que se acabe el tiempo. \2debes comer al menos 25 manzanas.*
+
+consejo: si te chocas con tu propia cola, perderás; si te chocas con el borde de la pantalla, no. cuidado con las bombas y las paredes.</level5_description_02>
+        <level5_description_03>usa los potenciadores para comerte todas las manzanas que puedas antes de que se acabe el tiempo. \2debes comer al menos 25 manzanas.*
+
+consejo: si te chocas con tu propia cola, perderás; si te chocas con el borde de la pantalla, no. cuidado con las bombas y las paredes.</level5_description_03>
+        <level_title_6>desafío vertical</level_title_6>
+        <level6_description_01>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 7 para abrirla!*
+
+consejo: los potenciadores te pueden ayudar.</level6_description_01>
+        <level6_description_02>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 8 para abrirla!*
+
+consejo: los potenciadores te pueden ayudar.</level6_description_02>
+        <level6_description_03>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 10 para abrirla!*
+
+consejo: los potenciadores te pueden ayudar.</level6_description_03>
+        <level_title_7>desafío cronometrado con potenciadores, serpiente vs. serpiente</level_title_7>
+        <level7_description_01>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema.</level7_description_01>
+        <level7_description_02>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level7_description_02>
+        <level7_description_03>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo.
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level7_description_03>
+        <level_title_8>desafío horizontal</level_title_8>
+        <level8_description_01>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 8 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level8_description_01>
+        <level8_description_02>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 8 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level8_description_02>
+        <level8_description_03>objetivo: llega al final del nivel comiendo suficientes manzanas para abrir la puerta. \2¡cómete al menos 9 para abrirla!*
+
+consejo: evita todo tipo de paredes.</level8_description_03>
+        <level_title_9>desafío cronometrado con potenciadores, serpiente vs. serpiente</level_title_9>
+        <level9_description_01>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo. \2debes comer al menos 25 manzanas.*
+
+consejo: puedes atravesar a tu rival sin ningún problema.</level9_description_01>
+        <level9_description_02>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo. \2debes comer al menos 25 manzanas.*
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level9_description_02>
+        <level9_description_03>usa los potenciadores para comer más manzanas que tu rival antes de que se acabe el tiempo. \2debes comer al menos 30 manzanas.*
+
+consejo: puedes atravesar a tu rival sin ningún problema. cuidado con las paredes.</level9_description_03>
+        <survivalmode_description>trata de sobrevivir y consigue tantas manzanas como puedas.
+
+¡ten cuidado!
+después de un tiempo, bombas y paredes aparecerán aleatoriamente.</survivalmode_description>
+        <leaderboard_your_score>tu puntuación: </leaderboard_your_score>
+        <finish_all_level>¡enhorabuena! has completado todos los niveles.</finish_all_level>
+        <win>¡has ganado!</win>
+        <lose_score>¡necesitas más manzanas!</lose_score>
+        <lose_hit_the_bomb>¡no comas la bomba!</lose_hit_the_bomb>
+        <lose_hit_the_wall>¡no choques contra la pared!</lose_hit_the_wall>
+        <lose_hit_body>¡no comas tu propio cuerpo!</lose_hit_body>
+        <lose_hit_the_door>¡necesitas más manzanas!</lose_hit_the_door>
+        <unlocked_door>¡puerta desbloqueada!</unlocked_door>
+        <pop_up_next_level_description_1>volver a selección de nivel</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>ir a la siguiente dificultad</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>ir al siguiente nivel</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>necesitas más ^</pop_up_next_level_description_4>
+        <leaderboard_you>tú</leaderboard_you>
+        <description_java>el legendario snake ha regresado con una pequeña actualización en color para multiplicar la diversión.</description_java>
+        <enable_sound>¿quieres sonido?</enable_sound>
+    </language>
+    <language lang="it">
+        <game_name>snake</game_name>
+        <text_language>lingua</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>sì</text_yes>
+        <text_no>no</text_no>
+        <press_5>premi 5 per continuare</press_5>
+        <text_play>gioca</text_play>
+        <text_sound_on>audio: sì</text_sound_on>
+        <text_sound_off>audio: no</text_sound_off>
+        <text_help>aiuto</text_help>
+        <text_exit>esci</text_exit>
+        <confirm_mm>vuoi tornare al menu principale?</confirm_mm>
+        <confirm_qq>vuoi uscire dal gioco?</confirm_qq>
+        <confirm_restart>vuoi riavviare?</confirm_restart>
+        <text_level>livello</text_level>
+        <title_in_game_menu>menu di pausa</title_in_game_menu>
+        <text_resume>riprendi</text_resume>
+        <text_restart>riavvia</text_restart>
+        <text_main_menu>menu</text_main_menu>
+        <customer_care>serv. clienti</customer_care>
+        <text_survival>sopravviv.</text_survival>
+        <text_about>riconoscim.</text_about>
+        <text_controls>comandi</text_controls>
+        <text_colours>colori</text_colours>
+        <title_power_ups>potenziamenti</title_power_ups>
+        <title_leaderboard>classifica</title_leaderboard>
+        <text_difficult>difficoltà</text_difficult>
+        <text_diff_1>facile</text_diff_1>
+        <text_diff_2>normale</text_diff_2>
+        <text_diff_3>difficile</text_diff_3>
+        <text_settings>impostazioni</text_settings>
+        <next_level>livello seguente</next_level>
+        <new_record>congratulazioni!
+nuovo record</new_record>
+        <tutorial_control>seleziona una combinazione di comandi e divertiti con il gioco. puoi cambiare i comandi di gioco nel menu opzioni.</tutorial_control>
+        <tutorial_color>scegli il tuo colore. puoi cambiare il colore nel menu opzioni.</tutorial_color>
+        <credits_01>\1snake*
+versione x.x.x
+© 2019 gameloft
+
+tutti i diritti riservati. gameloft e il logo gameloft sono marchi registrati di gameloft negli stati uniti e/o in altri paesi.
+
+\1info e servizio clienti:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1responsabile studio*
+phung viet hung
+
+\1responsabili deployment*
+alain etienne
+ngo thai duy
+
+\1direttore creativo*
+stefan zamfir</credits_02>
+        <credits_03>\1produttori esecutivi*
+aurelien lavaud
+truong cong hieu
+
+\1produttori*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1capi design gioco*
+nguyen quoc dong
+mai anh duc
+
+\1design gioco*
+maxime weets
+ho dac the
+
+\1grafica*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1capi programmazione*
+ly hoang trung
+nguyen nguyen vu
+
+\1programmazione*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1responsabili cq progetto*
+pham thi van an
+ly duc an
+
+\1cq*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1direttore audio*
+jorge peirano
+
+\1produttore audio mondo*
+ulrich frantz
+
+\1capo tecnici suono*
+ tran nhat thai tung
+
+\1tecnici suono*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1responsabile localizzazione*
+alexis green-painchaud
+
+\1coordinatori localizzazione*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localizzazione*
+marco antonelli
+alen marks
+rodolfo martignago
+marcello piani
+giuditta trifogli</credits_09>
+        <help_page_1>2: spostati in alto
+4: spostati a sinistra
+6: spostati a destra
+8: spostati in basso
+
+puoi anche giocare con il d-pad.
+
+</help_page_1>
+        <help_page_2>comandi corrispondenti
+2 = su sul d-pad
+4 = sinistra sul d-pad
+6 = destra sul d-pad
+8 = giù sul d-pad</help_page_2>
+        <help_page_3>se vuoi rendere il tuo serpente più vivace, puoi modificarne il colore nel menu opzioni.</help_page_3>
+        <help_page_4>aumenta il punteggio facendo diventare più lungo il serpente.</help_page_4>
+        <help_page_5>fai attenzione! se il serpente mangia una bomba, perderai.</help_page_5>
+        <help_page_6>aiuta il serpente a raccogliere le mele più facilmente.</help_page_6>
+        <help_page_7>ci sono 2 diversi moltiplicatori: x2 e x4. ti aiuteranno a fare più punti quando il serpente mangia una mela.</help_page_7>
+        <help_page_8>dimezza la lunghezza del serpente e riduce notevolmente la sua velocità.</help_page_8>
+        <help_page_9>il serpente diventerà invincibile e potrà distruggere i muri.</help_page_9>
+        <level_unlock_description>hai bisogno di ^ ‰\d per sbloccare questo livello.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>sfida a tempo</level_title_1>
+        <level1_description_01>obiettivo: mangia più mele che puoi prima che scada il tempo. \2devi mangiare almeno 10 mele.*
+
+consiglio: se urti la tua coda, perderai; urtare i bordi dello schermo, invece, non ha conseguenze.</level1_description_01>
+        <level1_description_02>obiettivo: mangia più mele che puoi prima che scada il tempo. \2devi mangiare almeno 10 mele.*
+
+consiglio: se urti la tua coda o i muri, perderai; urtare i bordi dello schermo, invece, non ha conseguenze.</level1_description_02>
+        <level1_description_03>obiettivo: mangia più mele che puoi prima che scada il tempo. \2devi mangiare almeno 10 mele.*
+
+consiglio: se urti la tua coda o i muri, perderai; urtare i bordi dello schermo, invece, non ha conseguenze.</level1_description_03>
+        <level_title_2>sfida orizzontale</level_title_2>
+        <level2_description_01>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 4 mele per aprirlo.*
+
+consiglio: evita i muri.</level2_description_01>
+        <level2_description_02>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 6 mele per aprirlo.*
+
+consiglio: evita i muri.</level2_description_02>
+        <level2_description_03>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 6 mele per aprirlo.*
+
+consiglio: evita i muri.</level2_description_03>
+        <level_title_3>sfida a tempo serpente contro serpente</level_title_3>
+        <level3_description_01>obiettivo: mangia più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze.</level3_description_01>
+        <level3_description_02>obiettivo: mangia più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze. fai attenzione ai muri.</level3_description_02>
+        <level3_description_03>obiettivo: mangia più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze. fai attenzione ai muri.</level3_description_03>
+        <level_title_4>sfida verticale</level_title_4>
+        <level4_description_01>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 8 mele per aprirlo.*
+
+consiglio: evita i muri.</level4_description_01>
+        <level4_description_02>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 8 mele per aprirlo.*
+
+consiglio: evita i muri.</level4_description_02>
+        <level4_description_03>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 9 mele per aprirlo.*
+
+consiglio: evita i muri.</level4_description_03>
+        <level_title_5>sfida a tempo con potenziamenti</level_title_5>
+        <level5_description_01>usa i potenziamenti per mangiare più mele che puoi prima che scada il tempo. \2devi mangiare almeno 20 mele.*
+
+consiglio: se urti la tua coda, perderai; urtare i bordi dello schermo, invece, non ha conseguenze. fai attenzione alle bombe.</level5_description_01>
+        <level5_description_02>usa i potenziamenti per mangiare più mele che puoi prima che scada il tempo. \2devi mangiare almeno 25 mele.*
+
+consiglio: se urti la tua coda, perderai; urtare i bordi dello schermo, invece, non ha conseguenze. fai attenzione alle bombe e ai muri.</level5_description_02>
+        <level5_description_03>usa i potenziamenti per mangiare più mele che puoi prima che scada il tempo. \2devi mangiare almeno 25 mele.*
+
+consiglio: se urti la tua coda, perderai; urtare i bordi dello schermo, invece, non ha conseguenze. fai attenzione alle bombe e ai muri.</level5_description_03>
+        <level_title_6>sfida verticale</level_title_6>
+        <level6_description_01>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 7 mele per aprirlo.*
+
+consiglio: i potenziamenti ti aiuteranno.</level6_description_01>
+        <level6_description_02>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 8 mele per aprirlo.*
+
+consiglio: i potenziamenti ti aiuteranno.</level6_description_02>
+        <level6_description_03>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 10 mele per aprirlo.*
+
+consiglio: i potenziamenti ti aiuteranno.</level6_description_03>
+        <level_title_7>sfida  a tempo tra serpenti con potenziamenti</level_title_7>
+        <level7_description_01>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze.</level7_description_01>
+        <level7_description_02>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze. fai attenzione ai muri.</level7_description_02>
+        <level7_description_03>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo.
+
+consiglio: puoi urtare il tuo avversario senza conseguenze. fai attenzione ai muri.</level7_description_03>
+        <level_title_8>sfida orizzontale</level_title_8>
+        <level8_description_01>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 8 mele per aprirlo.*
+
+consiglio: evita i muri.</level8_description_01>
+        <level8_description_02>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 8 mele per aprirlo.*
+
+consiglio: evita i muri.</level8_description_02>
+        <level8_description_03>obiettivo: raggiungi la fine del livello e mangia abbastanza mele per fare aprire il portale. \2mangia almeno 9 mele per aprirlo.*
+
+consiglio: evita i muri.</level8_description_03>
+        <level_title_9>sfida a tempo serpente contro serpente con potenziamenti</level_title_9>
+        <level9_description_01>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo. \2devi mangiare almeno 25 mele.*
+
+consiglio: puoi urtare il tuo avversario senza conseguenze.</level9_description_01>
+        <level9_description_02>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo. \2devi mangiare almeno 25 mele.*
+
+consiglio: puoi urtare il tuo avversario senza conseguenze, ma fai attenzione ai muri.</level9_description_02>
+        <level9_description_03>usa i potenziamenti per mangiare più mele del tuo avversario prima che scada il tempo. \2devi mangiare almeno 30 mele.*
+
+consiglio: puoi urtare il tuo avversario senza conseguenze, ma fai attenzione ai muri.</level9_description_03>
+        <survivalmode_description>cerca di sopravvivere e di raccogliere quante più mele puoi.
+
+fai attenzione!
+dopo qualche tempo, le bombe e le mura appariranno in maniera casuale.</survivalmode_description>
+        <leaderboard_your_score>i tuoi punti: </leaderboard_your_score>
+        <finish_all_level>complimenti! hai completato tutti i livelli.</finish_all_level>
+        <win>hai vinto!</win>
+        <lose_score>ti servono altre mele!</lose_score>
+        <lose_hit_the_bomb>non mangiare le bombe!</lose_hit_the_bomb>
+        <lose_hit_the_wall>non mangiare i muri!</lose_hit_the_wall>
+        <lose_hit_body>non mangiare la tua coda!</lose_hit_body>
+        <lose_hit_the_door>ti servono altre mele!</lose_hit_the_door>
+        <unlocked_door>portale aperto!</unlocked_door>
+        <pop_up_next_level_description_1>torna alla selezione del livello</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>vai al prossimo livello di difficoltà</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>vai al prossimo livello</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4> ^ insufficienti</pop_up_next_level_description_4>
+        <leaderboard_you>tu</leaderboard_you>
+        <description_java>il leggendario serpente è tornato con un piccolo aggiornamento che rende giocare su uno schermo a colori ancora più divertente.</description_java>
+        <enable_sound>vuoi l'audio?</enable_sound>
+    </language>
+    <language lang="br">
+        <game_name>snake</game_name>
+        <text_language>idioma</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>sim</text_yes>
+        <text_no>não</text_no>
+        <press_5>aperte 5 para continuar</press_5>
+        <text_play>jogar</text_play>
+        <text_sound_on>som: lig.</text_sound_on>
+        <text_sound_off>som: desl.</text_sound_off>
+        <text_help>ajuda</text_help>
+        <text_exit>sair</text_exit>
+        <confirm_mm>quer voltar para o menu principal?</confirm_mm>
+        <confirm_qq>quer sair do jogo?</confirm_qq>
+        <confirm_restart>deseja reiniciar?</confirm_restart>
+        <text_level>nível</text_level>
+        <title_in_game_menu>menu do jogo</title_in_game_menu>
+        <text_resume>continuar</text_resume>
+        <text_restart>iniciar</text_restart>
+        <text_main_menu>menu princ.</text_main_menu>
+        <customer_care>apoio ao cliente</customer_care>
+        <text_survival>sobrevivência</text_survival>
+        <text_about>sobre</text_about>
+        <text_controls>controles</text_controls>
+        <text_colours>cores</text_colours>
+        <title_power_ups>acessórios</title_power_ups>
+        <title_leaderboard>placar</title_leaderboard>
+        <text_difficult>dificuldade</text_difficult>
+        <text_diff_1>fácil</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>difícil</text_diff_3>
+        <text_settings>ajustes</text_settings>
+        <next_level>próx. nível</next_level>
+        <new_record>parabéns!
+novo recorde</new_record>
+        <tutorial_control>selecione um esquema de controle e aproveite o jogo. você pode mudar os controles no menu de opções.</tutorial_control>
+        <tutorial_color>escolha sua cor. você pode mudar as cores no menu de opções.</tutorial_color>
+        <credits_01>\1snake*
+versão x.x.x
+© 2019 gameloft
+
+todos os direitos reservados. gameloft e o logo da gameloft são marcas registradas da gameloft nos eua e/ou em outros países.
+
+\1informações e atendimento
+ao cliente:*
+www.gameloft.com
+support.gameloft.com
+</credits_01>
+        <credits_02>\1gerência do estúdio*
+phung viet hung
+
+\1gerência de implantação*
+alain etienne
+ngo thai duy
+
+\1direção de criação*
+stefan zamfir</credits_02>
+        <credits_03>\1produção executiva*
+aurelien lavaud
+truong cong hieu
+
+\1produção*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1liderança de design de jogo*
+nguyen quoc dong
+mai anh duc
+
+\1design de jogo*
+maxime weets
+ho dac the
+
+\1arte*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05> \1liderança de programação*
+ly hoang trung
+nguyen nguyen vu
+
+\1programação*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1gerência de projeto de cq*
+pham thi van an
+ly duc an
+
+\1controle de qualidade*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1direção de áudio*
+jorge peirano
+
+\1produção mundial de áudio*
+ulrich frantz
+
+\1liderança técnica de som*
+ tran nhat thai tung
+
+\1técnicos de som*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1gerência de localização*
+alexis green-painchaud
+
+\1coordenação de localização*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localização*
+priscilla fogiato
+carlos bertazzo
+marcelo moreira
+suzanne matos
+rafael silva</credits_09>
+        <help_page_1>2: virar pra cima
+4: virar pra esquerda
+6: virar pra direita
+8: virar pra baixo
+
+o jogo também pode ser jogado com a tecla de direção.
+
+</help_page_1>
+        <help_page_2>controles correspondentes
+2 = tecla de direção pra cima
+4 = tecla de direção esquerda
+6 = tecla de direção direita
+8 = tecla de direção pra baixo</help_page_2>
+        <help_page_3>se você quiser deixar sua cobra mais colorida, você pode mudar a cor dela no menu de opções.</help_page_3>
+        <help_page_4>aumenta a pontuação e faz a cobra crescer mais.</help_page_4>
+        <help_page_5>cuidado! se a cobra comer uma bomba, você perde.</help_page_5>
+        <help_page_6>ajuda a cobra a recolher maçãs mais facilmente.</help_page_6>
+        <help_page_7>existem dois multiplicadores diferentes: x2 e x4. eles vão ajudar a cobra a conseguir mais pontos ao comer uma maçã.</help_page_7>
+        <help_page_8>encolhe a cobra para a metade de seu tamanho e reduz muito sua velocidade.</help_page_8>
+        <help_page_9>a cobra se tornará invencível e poderá quebrar paredes.</help_page_9>
+        <level_unlock_description>você precisa de ^ ‰\d para desbloquear este nível.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>desafio de tempo</level_title_1>
+        <level1_description_01>objetivo: coma o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 10 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda, mas não irá perder ao dar de cara nos cantos da tela.</level1_description_01>
+        <level1_description_02>objetivo: coma o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 10 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda ou acertar a parede, mas não irá perder ao dar de cara nos cantos da tela.</level1_description_02>
+        <level1_description_03>objetivo: coma o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 10 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda ou acertar a parede, mas não irá perder ao dar de cara nos cantos da tela.</level1_description_03>
+        <level_title_2>desafio horizontal</level_title_2>
+        <level2_description_01>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 4 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level2_description_01>
+        <level2_description_02>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 6 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level2_description_02>
+        <level2_description_03>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 6 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level2_description_03>
+        <level_title_3>desafio de tempo cobra vs. cobra</level_title_3>
+        <level3_description_01>objetivo: coma mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do seu adversário sem ter medo.</level3_description_01>
+        <level3_description_02>objetivo: coma mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do seu adversário sem ter medo. cuidado com as paredes.</level3_description_02>
+        <level3_description_03>objetivo: coma mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do seu adversário sem ter medo. cuidado com as paredes.</level3_description_03>
+        <level_title_4>desafio vertical</level_title_4>
+        <level4_description_01>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 8 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level4_description_01>
+        <level4_description_02>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 8 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level4_description_02>
+        <level4_description_03>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 9 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level4_description_03>
+        <level_title_5>desafio de tempo com acessórios</level_title_5>
+        <level5_description_01>use os acessórios para comer o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 20 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda, mas não irá perder ao dar de cara nos cantos da tela. cuidado com as bombas.</level5_description_01>
+        <level5_description_02>use os acessórios para comer o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 25 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda, mas não irá perder ao dar de cara nos cantos da tela. cuidado com as bombas e com as paredes.</level5_description_02>
+        <level5_description_03>use os acessórios para comer o máximo de maçãs que puder antes do tempo acabar. \2você deve comer pelo menos 25 maçãs.*
+
+dica: você irá perder se encostar na sua própria cauda, mas não irá perder ao dar de cara nos cantos da tela. cuidado com as bombas e com as paredes.</level5_description_03>
+        <level_title_6>desafio vertical</level_title_6>
+        <level6_description_01>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 7 maçãs para abri-lo!*
+
+dica: acessórios podem ajudar.</level6_description_01>
+        <level6_description_02>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 8 maçãs para abri-lo!*
+
+dica: acessórios podem ajudar.</level6_description_02>
+        <level6_description_03>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 10 maçãs para abri-lo!*
+
+dica: acessórios podem ajudar.</level6_description_03>
+        <level_title_7>desafio de tempo cobra vs. cobra com acessórios</level_title_7>
+        <level7_description_01>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do adversário sem medo.</level7_description_01>
+        <level7_description_02>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do adversário sem medo. cuidado com as paredes.</level7_description_02>
+        <level7_description_03>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar.
+
+dica: você pode passar por cima do adversário sem medo. cuidado com as paredes.</level7_description_03>
+        <level_title_8>desafio horizontal</level_title_8>
+        <level8_description_01>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 8 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level8_description_01>
+        <level8_description_02>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 8 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level8_description_02>
+        <level8_description_03>alvo: chegue ao fim do nível comendo maçãs suficientes para abrir o portão. \2coma pelo menos 9 maçãs para abri-lo!*
+
+dica: evite todos os tipos de parede.</level8_description_03>
+        <level_title_9>desafio de tempo cobra vs. cobra com acessórios</level_title_9>
+        <level9_description_01>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar. \2você deve comer pelo menos 25 maçãs.*
+
+dica: você pode passar por cima do adversário sem medo.</level9_description_01>
+        <level9_description_02>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar. \2você deve comer pelo menos 25 maçãs.*
+
+dica: você pode passar por cima do adversário sem medo. cuidado com as paredes.</level9_description_02>
+        <level9_description_03>use os acessórios para comer mais maçãs que seu adversário antes do tempo acabar. \2você deve comer pelo menos 30 maçãs.*
+
+dica: você pode passar por cima do adversário sem medo. cuidado com as paredes.</level9_description_03>
+        <survivalmode_description>tente sobreviver e pegar o máximo de maçãs que puder.
+
+cuidado! após um certo tempo, bombas e paredes aparecerão aleatoriamente.</survivalmode_description>
+        <leaderboard_your_score>sua pontuação: </leaderboard_your_score>
+        <finish_all_level>parabéns! você terminou todos os níveis.</finish_all_level>
+        <win>vitória!</win>
+        <lose_score>você precisa de mais maçãs!</lose_score>
+        <lose_hit_the_bomb>não coma a bomba!</lose_hit_the_bomb>
+        <lose_hit_the_wall>não bata na parede!</lose_hit_the_wall>
+        <lose_hit_body>não coma sua cauda!</lose_hit_body>
+        <lose_hit_the_door>você precisa de mais maçãs!</lose_hit_the_door>
+        <unlocked_door>portão desbloqueado!</unlocked_door>
+        <pop_up_next_level_description_1>voltar à seleção de nível</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>ir para o próximo desafio</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>ir para o próximo nível</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>sem ^ suficientes</pop_up_next_level_description_4>
+        <leaderboard_you>você</leaderboard_you>
+        <description_java>a lendária cobra está de volta com uma pequena atualização que faz o jogo ainda mais divertido na tela em cores.</description_java>
+        <enable_sound>deseja som?</enable_sound>
+    </language>
+    <language lang="pt">
+        <game_name>snake</game_name>
+        <text_language>idioma</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>sim</text_yes>
+        <text_no>não</text_no>
+        <press_5>prime 5 para continuar</press_5>
+        <text_play>jogar</text_play>
+        <text_sound_on>som: sim</text_sound_on>
+        <text_sound_off>som: não</text_sound_off>
+        <text_help>ajuda</text_help>
+        <text_exit>sair</text_exit>
+        <confirm_mm>queres voltar ao menu principal?</confirm_mm>
+        <confirm_qq>queres sair do jogo?</confirm_qq>
+        <confirm_restart>queres reiniciar?</confirm_restart>
+        <text_level>nível</text_level>
+        <title_in_game_menu>menu de jogo</title_in_game_menu>
+        <text_resume>recomeçar</text_resume>
+        <text_restart>reiniciar</text_restart>
+        <text_main_menu>menu principal</text_main_menu>
+        <customer_care>apoio ao cliente</customer_care>
+        <text_survival>sobrevivência</text_survival>
+        <text_about>acerca de</text_about>
+        <text_controls>controlos</text_controls>
+        <text_colours>cores</text_colours>
+        <title_power_ups>extras</title_power_ups>
+        <title_leaderboard>classificação</title_leaderboard>
+        <text_difficult>dificuldade</text_difficult>
+        <text_diff_1>fácil</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>difícil</text_diff_3>
+        <text_settings>definições</text_settings>
+        <next_level>nível seguinte</next_level>
+        <new_record>parabéns!
+novo recorde</new_record>
+        <tutorial_control>selecciona um esquema de controlo e desfruta do jogo. podes alterar os controlos no menu de opções.</tutorial_control>
+        <tutorial_color>escolhe a tua cor. podes mudar as cores no menu de opções.</tutorial_color>
+        <credits_01>\1snake*
+versão x.x.x
+© 2019 gameloft
+
+todos os direitos reservados. gameloft e o logótipo gameloft são marcas registadas gameloft nos eua e/ou outros países.
+
+\1informação e apoio ao cliente:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1gerência do estúdio*
+phung viet hung
+
+\1gestão de implementação*
+alain etienne
+ngo thai duy
+
+\1direção criativa*
+stefan zamfir</credits_02>
+        <credits_03>\1produção executiva*
+aurelien lavaud
+truong cong hieu
+
+\1produção*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1chefe de design de jogo*
+nguyen quoc dong
+mai anh duc
+
+\1design de jogo*
+maxime weets
+ho dac the
+
+\1arte*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1chefe de programação*
+ly hoang trung
+nguyen nguyen vu
+
+\1programação*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1gestão de cq de projeto*
+pham thi van an
+ly duc an
+
+\1controlo de qualidade*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1director de áudio*
+jorge peirano
+
+\1produção mundial de áudio*
+ulrich frantz
+
+\1chefe de técnicos de som*
+ tran nhat thai tung
+
+\1técnicos de som*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1gestão de localização*
+alexis green-painchaud
+
+\1coordenadores de localização*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1localização*
+owen weiss
+timothy leclair
+angela roberts
+chelsey lam
+elona ritchie</credits_09>
+        <help_page_1>2: mover para cima
+4: mover para a esquerda
+6: mover para a direita
+8: mover para baixo
+
+o jogo também se pode jogar com as setas de direcção.
+
+</help_page_1>
+        <help_page_2>controlos correspondentes
+2 = seta para cima
+4 = seta para a esquerda
+6 = seta para a direita
+8 = seta para baixo</help_page_2>
+        <help_page_3>se queres que a tua serpente seja mais colorida, podes mudar a cor dela no menu de opções.</help_page_3>
+        <help_page_4>aumenta a pontuação e faz crescer a serpente.</help_page_4>
+        <help_page_5>cuidado!! se a serpente comer uma bomba, perderás.</help_page_5>
+        <help_page_6>ajuda a serpente a recolher mais maçãs.</help_page_6>
+        <help_page_7>existem 2 multiplicadores diferentes: x2, x4. estes ajudarão a serpente a obter mais pontos quando comer uma maçã.</help_page_7>
+        <help_page_8>encolhe a serpente até metade e reduz muito a sua velocidade.</help_page_8>
+        <help_page_9>a serpente irá tornar-se invencível e poderá atravessar paredes.</help_page_9>
+        <level_unlock_description>precisas de ^ ‰\d para desbloquear este nível.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>desafio cronometrado</level_title_1>
+        <level1_description_01>objectivo: comer o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 10 maçãs.*
+
+dica: se tocares na própria cauda perderás, mas se tocares na extremidade do ecrã, não. </level1_description_01>
+        <level1_description_02>objectivo: comer o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 10 maçãs.*
+
+dica: se tocares na própria cauda e em paredes, perderás, mas se tocares na extremidade do ecrã, não. </level1_description_02>
+        <level1_description_03>objectivo: comer o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 10 maçãs.*
+
+dica: se tocares na própria cauda e em paredes, perderás, mas se tocares na extremidade do ecrã, não. </level1_description_03>
+        <level_title_2>desafio horizontal</level_title_2>
+        <level2_description_01>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 4 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level2_description_01>
+        <level2_description_02>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 6 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level2_description_02>
+        <level2_description_03>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 6 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level2_description_03>
+        <level_title_3>desafio cronometrado: serpente vs serpente</level_title_3>
+        <level3_description_01>objectivo: comer mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança. cuidado com as paredes.</level3_description_01>
+        <level3_description_02>objectivo: comer mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança. cuidado com as paredes.</level3_description_02>
+        <level3_description_03>objectivo: comer mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança. cuidado com as paredes.</level3_description_03>
+        <level_title_4>desafio vertical</level_title_4>
+        <level4_description_01>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 8 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level4_description_01>
+        <level4_description_02>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 8 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level4_description_02>
+        <level4_description_03>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 9 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level4_description_03>
+        <level_title_5>desafio cronometrado com extras</level_title_5>
+        <level5_description_01>usa os extras para comeres o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 20 maçãs.*
+
+dica: se tocares na própria cauda perderás, mas se tocares na extremidade do ecrã, não. cuidado com as bombas.</level5_description_01>
+        <level5_description_02>usa os extras para comeres o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 25 maçãs.*
+
+dica: se tocares na própria cauda perderás, mas se tocares na extremidade do ecrã, não. cuidado com as bombas e as paredes.</level5_description_02>
+        <level5_description_03>usa os extras para comeres o máximo de maçãs possível antes do fim do tempo. \2tens que comer pelo menos 25 maçãs.*
+
+dica: se tocares na própria cauda perderás, mas se tocares na extremidade do ecrã, não. cuidado com as bombas e as paredes.</level5_description_03>
+        <level_title_6>desafio vertical</level_title_6>
+        <level6_description_01>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 7 maçãs para o abrires!*
+
+dica: os extras podem ajudar-te.</level6_description_01>
+        <level6_description_02>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 8 maçãs para o abrires!*
+
+dica: os extras podem ajudar-te.</level6_description_02>
+        <level6_description_03>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 10 maçãs para o abrires!*
+
+dica: os extras podem ajudar-te.</level6_description_03>
+        <level_title_7>desafio cronometrado serpente vs. serpente, com extras</level_title_7>
+        <level7_description_01>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança.</level7_description_01>
+        <level7_description_02>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança. cuidado com as paredes.</level7_description_02>
+        <level7_description_03>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo.
+
+dica: podes sobrepor-te ao teu adversário em segurança. cuidado com as paredes.</level7_description_03>
+        <level_title_8>desafio horizontal</level_title_8>
+        <level8_description_01>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 8 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level8_description_01>
+        <level8_description_02>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 8 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level8_description_02>
+        <level8_description_03>meta: conclui o nível comendo maçãs suficientes para abrir o portal. \2come um mínimo de 9 maçãs para o abrires!*
+
+dica: evita todo o tipo de paredes.</level8_description_03>
+        <level_title_9>desafio cronometrado serpente vs. serpente com extras</level_title_9>
+        <level9_description_01>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo. \2tens que comer pelo menos 25 maçãs.*
+
+dica: podes passar por cima do teu adversário em segurança.</level9_description_01>
+        <level9_description_02>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo. \2tens que comer pelo menos 25 maçãs.*
+
+dica: podes passar por cima do teu adversário em segurança. cuidado com as paredes.</level9_description_02>
+        <level9_description_03>usa os extras para comeres mais maçãs do que o teu adversário antes do fim do tempo. \2tens que comer pelo menos 30 maçãs.*
+
+dica: podes passar por cima do teu adversário em segurança. cuidado com as paredes.</level9_description_03>
+        <survivalmode_description>tenta sobreviver e apanha todas as maçãs que conseguires.
+
+tem cuidado! após algum tempo, vão começar a surgir bombas e paredes aleatoriamente.</survivalmode_description>
+        <leaderboard_your_score>os teus pontos: </leaderboard_your_score>
+        <finish_all_level>parabéns! concluíste os níveis todos.</finish_all_level>
+        <win>vitória!</win>
+        <lose_score>precisas de mais maçãs!</lose_score>
+        <lose_hit_the_bomb>não comas a bomba!</lose_hit_the_bomb>
+        <lose_hit_the_wall>não toques na parede!</lose_hit_the_wall>
+        <lose_hit_body>não comas o teu corpo!</lose_hit_body>
+        <lose_hit_the_door>precisas de mais maçãs!</lose_hit_the_door>
+        <unlocked_door>portal desbloqueado!</unlocked_door>
+        <pop_up_next_level_description_1>voltar à selecção de níveis</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>ir à dificuldade seguinte</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>ir ao nível seguinte</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>insuficientes ^</pop_up_next_level_description_4>
+        <leaderboard_you>tu</leaderboard_you>
+        <description_java>a lendária cobra voltou com uma pequena atualização que tornará ainda mais divertido jogar num ecrã a cores.</description_java>
+        <enable_sound>activar som?</enable_sound>
+    </language>
+    <language lang="ru">
+        <game_name>snake</game_name>
+        <text_language>язык</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>да</text_yes>
+        <text_no>нет</text_no>
+        <press_5>нажмите 5 для продолжения</press_5>
+        <text_play>играть</text_play>
+        <text_sound_on>звук: вкл.</text_sound_on>
+        <text_sound_off>звук: выкл.</text_sound_off>
+        <text_help>справка</text_help>
+        <text_exit>выход</text_exit>
+        <confirm_mm>вернуться в главное меню?</confirm_mm>
+        <confirm_qq>выйти из игры?</confirm_qq>
+        <confirm_restart>желаете перезапустить?</confirm_restart>
+        <text_level>уровень</text_level>
+        <title_in_game_menu>внутриигровое меню</title_in_game_menu>
+        <text_resume>продолжить</text_resume>
+        <text_restart>перезапуск</text_restart>
+        <text_main_menu>главное</text_main_menu>
+        <customer_care>поддержка пользователей</customer_care>
+        <text_survival>выживание</text_survival>
+        <text_about>об игре</text_about>
+        <text_controls>управление</text_controls>
+        <text_colours>цвета</text_colours>
+        <title_power_ups>усиления</title_power_ups>
+        <title_leaderboard>рейтинг</title_leaderboard>
+        <text_difficult>сложность</text_difficult>
+        <text_diff_1>легко</text_diff_1>
+        <text_diff_2>нормально</text_diff_2>
+        <text_diff_3>сложно</text_diff_3>
+        <text_settings>настройки</text_settings>
+        <next_level>след. уровень</next_level>
+        <new_record>поздравляем!
+новый рекорд</new_record>
+        <tutorial_control>выберите схему управления и начините игру. вы можете изменить схему управления в меню настроек.</tutorial_control>
+        <tutorial_color>выберите цвет. вы можете изменить цвет в меню настроек.</tutorial_color>
+        <credits_01>\1snake*
+версия x.x.x
+© 2019 gameloft
+
+все права защищены. gameloft и логотип gameloft являются торговыми марками gameloft в сша и/или других странах. 
+
+\1информация и поддержка
+пользователей:*
+www.gameloft.com
+support.gameloft.com
+</credits_01>
+        <credits_02>\1менеджер студии*
+phung viet hung
+
+\1менеджеры портирования*
+alain etienne
+ngo thai duy
+
+\1креативный директор*
+stefan zamfir</credits_02>
+        <credits_03>\1исполнительные продюсеры*
+aurelien lavaud
+truong cong hieu
+
+\1продюсеры*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1ведущие гейм-дизайнеры*
+nguyen quoc dong
+mai anh duc
+
+\1гейм-дизайнеры*
+maxime weets
+ho dac the
+
+\1художники*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1ведущие программисты*
+ly hoang trung
+nguyen nguyen vu
+
+\1программисты*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1проект-менеджеры тестирования*
+pham thi van an
+ly duc an
+
+\1вед. спец-ты тестирования*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1звукорежиссер*
+jorge peirano
+
+\1глоб. аудиопродюсер*
+ulrich frantz
+
+\1вед. звукотехник*
+ tran nhat thai tung
+
+\1звукотехники*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1менеджер локализации*
+alexis green-painchaud
+
+\1координаторы локализации*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1локализация*
+elena kurguz
+vadim medved
+marina rudnik
+svetlana kirichenko
+olga nabatova</credits_09>
+        <help_page_1>2: движение вверх
+4: движение влево
+6: движение вправо
+8: движение вниз
+
+также вы можете играть в полную версию игры с помощью джойстика.
+
+</help_page_1>
+        <help_page_2>управление
+2 = джойстик вверх
+4 = джойстик влево
+6 = джойстик вправо
+8 = джойстик вниз</help_page_2>
+        <help_page_3>если вы хотите, чтобы ваша змейка стала ярче, измените ее цвет в меню настроек.</help_page_3>
+        <help_page_4>повышает счет, змейка становится длиннее.</help_page_4>
+        <help_page_5>осторожно! вы проиграете, если змейка проглотит бомбу.</help_page_5>
+        <help_page_6>помогает змейке собирать яблоки.</help_page_6>
+        <help_page_7>есть 2 множителя: х2 и х4. они дают больше очков за съеденное яблоко.</help_page_7>
+        <help_page_8>уменьшает змейку в два раза и сильно снижает ее скорость.</help_page_8>
+        <help_page_9>дает змейке неуязвимость и способность проходить сквозь стены.</help_page_9>
+        <level_unlock_description>нужно ^ ‰\d, чтобы открыть этот уровень.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>испытание на время</level_title_1>
+        <level1_description_01>цель: съешьте как можно больше яблок, прежде чем выйдет время. \2нужно съесть не менее 10 яблок.*
+
+совет: если врежетесь в собственный хвост - проиграете, если в край экрана - нет.</level1_description_01>
+        <level1_description_02>цель: съешьте как можно больше яблок, прежде чем выйдет время. \2нужно съесть не менее 10 яблок.*
+
+совет: если врежетесь в собственный хвост или стену - проиграете, если в край экрана - нет.</level1_description_02>
+        <level1_description_03>цель: съешьте как можно больше яблок, прежде чем выйдет время. \2нужно съесть не менее 10 яблок.*
+
+совет: если врежетесь в собственный хвост или стену - проиграете, если в край экрана - нет.</level1_description_03>
+        <level_title_2>горизонтальный лабиринт</level_title_2>
+        <level2_description_01>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 4 яблока, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level2_description_01>
+        <level2_description_02>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 6 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level2_description_02>
+        <level2_description_03>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 6 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level2_description_03>
+        <level_title_3>испытание на время (2 змейки)</level_title_3>
+        <level3_description_01>цель: съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника.</level3_description_01>
+        <level3_description_02>цель: съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level3_description_02>
+        <level3_description_03>цель: съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level3_description_03>
+        <level_title_4>вертикальный лабиринт</level_title_4>
+        <level4_description_01>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 8 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level4_description_01>
+        <level4_description_02>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 8 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level4_description_02>
+        <level4_description_03>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 9 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level4_description_03>
+        <level_title_5>испытание на время с усилениями</level_title_5>
+        <level5_description_01>используя усиления, съешьте как можно больше яблок, пока не вышло время. \2нужно съесть не менее 20 яблок.*
+
+совет: если врежетесь в собственный хвост - проиграете, если в край экрана - нет. берегитесь бомб.</level5_description_01>
+        <level5_description_02>используя усиления, съешьте как можно больше яблок, пока не вышло время. \2нужно съесть не менее 25 яблок.*
+
+совет: если врежетесь в собственный хвост - проиграете, если в край экрана - нет. берегитесь бомб и стен.</level5_description_02>
+        <level5_description_03>используя усиления, съешьте как можно больше яблок, пока не вышло время. \2нужно съесть не менее 25 яблок.*
+
+совет: если врежетесь в собственный хвост - проиграете, если в край экрана - нет. берегитесь бомб и стен.</level5_description_03>
+        <level_title_6>вертикальный лабиринт</level_title_6>
+        <level6_description_01>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 7 яблок, чтобы открыть!*
+
+совет: используйте усиления.</level6_description_01>
+        <level6_description_02>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 8 яблок, чтобы открыть!*
+
+совет: используйте усиления.</level6_description_02>
+        <level6_description_03>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 10 яблок, чтобы открыть!*
+
+совет: используйте усиления.</level6_description_03>
+        <level_title_7>испытание на время с усилениями (2 змейки)</level_title_7>
+        <level7_description_01>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника.</level7_description_01>
+        <level7_description_02>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level7_description_02>
+        <level7_description_03>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время.
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level7_description_03>
+        <level_title_8>горизонтальный лабиринт</level_title_8>
+        <level8_description_01>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 8 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level8_description_01>
+        <level8_description_02>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 8 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level8_description_02>
+        <level8_description_03>цель: съешьте необходимое количество яблок, чтобы открыть ворота и пройти уровень. \2съешьте как минимум 9 яблок, чтобы открыть!*
+
+совет: избегайте любых видов стен.</level8_description_03>
+        <level_title_9>испытание на время с усилениями (2 змейки)</level_title_9>
+        <level9_description_01>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время. \2нужно съесть не менее 25 яблок.*
+
+совет: вы можете спокойно пересекать противника.</level9_description_01>
+        <level9_description_02>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время. \2нужно съесть не менее 25 яблок.*
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level9_description_02>
+        <level9_description_03>используя усиления, съешьте больше яблок, чем ваш противник, пока не вышло время. \2нужно съесть не менее 30 яблок.*
+
+совет: вы можете спокойно пересекать противника. не врезайтесь в стены.</level9_description_03>
+        <survivalmode_description>постарайтесь остаться в живых и получить как можно больше яблок.
+
+берегитесь!
+через некоторое время произвольным образом начнут появляться бомбы и стены.</survivalmode_description>
+        <leaderboard_your_score>счет: </leaderboard_your_score>
+        <finish_all_level>поздравляем! вы прошли все уровни.</finish_all_level>
+        <win>победа!</win>
+        <lose_score>вам нужно больше яблок!</lose_score>
+        <lose_hit_the_bomb>не проглотите бомбу!</lose_hit_the_bomb>
+        <lose_hit_the_wall>не врезайтесь в стены!</lose_hit_the_wall>
+        <lose_hit_body>не ешьте сами себя!</lose_hit_body>
+        <lose_hit_the_door>вам нужно больше яблок!</lose_hit_the_door>
+        <unlocked_door>ворота открыты!</unlocked_door>
+        <pop_up_next_level_description_1>назад к выбору уровня</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>перейдите к след. уровню сложности</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>перейдите на след. уровень</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>недостаточно ^</pop_up_next_level_description_4>
+        <leaderboard_you>вы</leaderboard_you>
+        <description_java>легендарная змейка возвращается! небольшие изменения принесут в игру цвет и еще больше веселья!</description_java>
+        <enable_sound>включить звук?</enable_sound>
+    </language>
+    <language lang="th">
+        <game_name>snake</game_name>
+        <text_language>ภาษา</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>ใช่</text_yes>
+        <text_no>ไม่</text_no>
+        <press_5>กด 5 เพื่อดำเนินการต่อ</press_5>
+        <text_play>เล่น</text_play>
+        <text_sound_on>เสียง: เปิด</text_sound_on>
+        <text_sound_off>เสียง: ปิด</text_sound_off>
+        <text_help>ความช่วยเหลือ</text_help>
+        <text_exit>ออก</text_exit>
+        <confirm_mm>คุณต้องการกลับไปที่เมนูหลักหรือไม่</confirm_mm>
+        <confirm_qq>คุณต้องการออกจากเกมหรือไม่</confirm_qq>
+        <confirm_restart>คุณต้องการเริ่มใหม่หรือไม่</confirm_restart>
+        <text_level>เลเวล</text_level>
+        <title_in_game_menu>เมนูภายในเกม</title_in_game_menu>
+        <text_resume>เล่นต่อ</text_resume>
+        <text_restart>เริ่มใหม่</text_restart>
+        <text_main_menu>เมนูหลัก</text_main_menu>
+        <customer_care>ฝ่ายบริการลูกค้า</customer_care>
+        <text_survival>เอาชีวิตรอด</text_survival>
+        <text_about>เกี่ยวกับ</text_about>
+        <text_controls>การควบคุม</text_controls>
+        <text_colours>สี</text_colours>
+        <title_power_ups>พลังพิเศษ</title_power_ups>
+        <title_leaderboard>กระดานคะแนน</title_leaderboard>
+        <text_difficult>ระดับความยาก</text_difficult>
+        <text_diff_1>ง่าย</text_diff_1>
+        <text_diff_2>ธรรมดา</text_diff_2>
+        <text_diff_3>ยาก</text_diff_3>
+        <text_settings>การตั้งค่า</text_settings>
+        <next_level>เลเวลถัดไป</next_level>
+        <new_record>ยินดีด้วย!
+สถิติใหม่</new_record>
+        <tutorial_control>เลือกรูปแบบการควบคุมและเล่นให้สนุก คุณสามารถเปลี่ยนการควบคุมได้ในเมนูตัวเลือก</tutorial_control>
+        <tutorial_color>เลือกสีที่คุณต้องการ คุณสามารถเปลี่ยนสีได้ในเมนูตัวเลือก</tutorial_color>
+        <credits_01>\1snake*
+เวอร์ชั่น x.x.x
+© 2019 gameloft
+
+สงวนลิขสิทธิ์ gameloft และโลโก้ gameloft เป็นเครื่องหมายการค้าของ gameloft ในสหรัฐอเมริกา และ/หรือประเทศอื่น ๆ
+
+\1ข้อมูลและฝ่ายบริการลูกค้า:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1ผู้จัดการสตูดิโอ*
+phung viet hung
+
+\1ผู้จัดการฝ่ายการปรับใช้*
+alain etienne
+ngo thai duy
+
+\1ผู้กำกับฝ่ายสร้างสรรค์*
+stefan zamfir</credits_02>
+        <credits_03>\1เอ๊กเซคิวทีฟโปรดิวเซอร์*
+aurelien lavaud
+truong cong hieu
+
+\1โปรดิวเซอร์*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1ฝ่ายออกแบบเกมหลัก*
+nguyen quoc dong
+mai anh duc
+
+\1ฝ่ายออกแบบเกม*
+maxime weets
+ho dac the
+
+\1ฝ่ายศิลป์*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1โปรแกรมเมอร์หลัก*
+ly hoang trung
+nguyen nguyen vu
+
+\1โปรแกรมเมอร์*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1ผู้จัดการโปรเจ็คท์ฝ่ายรับรองคุณภาพ*
+pham thi van an
+ly duc an
+
+\1ฝ่ายรับรองคุณภาพ*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1ผู้กำกับเสียง*
+jorge peirano
+\1โปรดิวเซอร์เสียงทั่วโลก*
+ulrich frantz
+\1ฝ่ายเทคนิคเสียงหลัก*
+ tran nhat thai tung
+\1ฝ่ายเทคนิคเสียง*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1ผู้จัดการฝ่ายแปล*
+alexis green-painchaud
+
+\1ผู้ประสานงานฝ่ายแปล*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1ฝ่ายแปล*
+samanawan tanakkasarenee
+warangkhana tanakkasarenee
+warut manoppong
+ratiporn chaipiyaporn
+narut tanyatorn</credits_09>
+        <help_page_1>2: เคลื่อนที่ขึ้น
+4: เคลื่อนที่ไปทางซ้าย
+6: เคลื่อนที่ไปทางขวา
+8: เคลื่อนที่ลง
+
+เกมนี้สามารถใช้แป้นทิศทางเล่นได้ทั้งหมด
+
+</help_page_1>
+        <help_page_2>การควบคุมที่สอดคล้อง
+2 = แป้นทิศทางขึ้น
+4 = แป้นทิศทางซ้าย
+6 = แป้นทิศทางขวา
+8 = แป้นทิศทางลง</help_page_2>
+        <help_page_3>หากคุณอยากให้งูมีสีสัน คุณสามารถเปลี่ยนสีงูได้ในเมนูตัวเลือก</help_page_3>
+        <help_page_4>เพิ่มคะแนนและทำให้งูตัวยาวขึ้น</help_page_4>
+        <help_page_5>ระวังนะ! ถ้างูกินระเบิด คุณจะแพ้</help_page_5>
+        <help_page_6>ช่วยให้งูเก็บแอปเปิลได้ง่ายขึ้น</help_page_6>
+        <help_page_7>ในเกมมีตัวคูณทั้งหมด 2 แบบ ได้แก่ x2 และ x4 ตัวคูณจะทำให้งูได้รับคะแนนมากขึ้นเมื่อกินแอปเปิล</help_page_7>
+        <help_page_8>ย่อส่วนงูลงครึ่งหนึ่งและลดความเร็วลงอย่างมาก</help_page_8>
+        <help_page_9>งูจะล่องหนและสามารถเลื้อยทะลุกำแพงได้</help_page_9>
+        <level_unlock_description>คุณต้องมี  ^ ‰\d เพื่อปลดล็อคเลเวลนี้</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>ชาเลนจ์จับเวลา</level_title_1>
+        <level1_description_01>เป้าหมาย: กินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 10 ลูก*
+
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเอง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร</level1_description_01>
+        <level1_description_02>เป้าหมาย: กินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 10 ลูก*
+
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเองและกำแพง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร</level1_description_02>
+        <level1_description_03>เป้าหมาย: กินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 10 ลูก*
+
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเองและกำแพง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร</level1_description_03>
+        <level_title_2>ชาเลนจ์แนวนอน</level_title_2>
+        <level2_description_01>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 4 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level2_description_01>
+        <level2_description_02>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 6 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level2_description_02>
+        <level2_description_03>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 6 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level2_description_03>
+        <level_title_3>ชาเลนจ์จับเวลางูปะทะงู</level_title_3>
+        <level3_description_01>เป้าหมาย: กินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้</level3_description_01>
+        <level3_description_02>เป้าหมาย: กินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level3_description_02>
+        <level3_description_03>เป้าหมาย: กินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level3_description_03>
+        <level_title_4>ชาเลนจ์แนวตั้ง</level_title_4>
+        <level4_description_01>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 8 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level4_description_01>
+        <level4_description_02>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 8 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level4_description_02>
+        <level4_description_03>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 9 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level4_description_03>
+        <level_title_5>ชาเลนจ์จับเวลาพร้อมพลังพิเศษ</level_title_5>
+        <level5_description_01>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 20 ลูก*
+
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเอง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร ระวังระเบิดเอาไว้ด้วยนะ</level5_description_01>
+        <level5_description_02>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 25 ลูก*
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเอง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร ระวังระเบิดและกำแพงเอาไว้ด้วยนะ</level5_description_02>
+        <level5_description_03>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากที่สุดก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 25 ลูก*
+เคล็ดลับ: คุณจะแพ้ถ้าชนหางตัวเอง แต่ถ้าชนขอบหน้าจอจะไม่เป็นอะไร ระวังระเบิดและกำแพงเอาไว้ด้วยนะ</level5_description_03>
+        <level_title_6>ชาเลนจ์แนวตั้ง</level_title_6>
+        <level6_description_01>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 7 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: พลังพิเศษอาจช่วยคุณได้</level6_description_01>
+        <level6_description_02>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 8 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: พลังพิเศษอาจช่วยคุณได้</level6_description_02>
+        <level6_description_03>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 10 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: พลังพิเศษอาจช่วยคุณได้</level6_description_03>
+        <level_title_7>ชาเลนจ์จับเวลางูปะทะงูพร้อมพลังพิเศษ</level_title_7>
+        <level7_description_01>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้</level7_description_01>
+        <level7_description_02>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level7_description_02>
+        <level7_description_03>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level7_description_03>
+        <level_title_8>ชาเลนจ์แนวนอน</level_title_8>
+        <level8_description_01>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 8 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level8_description_01>
+        <level8_description_02>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 8 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level8_description_02>
+        <level8_description_03>เป้าหมาย: เลื้อยไปจนถึงปลายสุดของเลเวลโดยการกินแอปเปิลให้เพียงพอเพื่อเปิดประตู \2กินแอปเปิลอย่างน้อย 9 ลูกเพื่อเปิดประตู!*
+
+เคล็ดลับ: หลีกเลี่ยงกำแพงทุกประเภท</level8_description_03>
+        <level_title_9>ชาเลนจ์จับเวลางูปะทะงูพร้อมพลังพิเศษ</level_title_9>
+        <level9_description_01>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 25 ลูก*
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้</level9_description_01>
+        <level9_description_02>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 25 ลูก*
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level9_description_02>
+        <level9_description_03>ใช้พลังพิเศษเพื่อกินแอปเปิลให้ได้มากกว่าคู่แข่งก่อนเวลาหมดลง \2คุณต้องกินแอปเปิลอย่างน้อย 30 ลูก*
+
+เคล็ดลับ: คุณสามารถเลื้อยข้ามคู่แข่งได้ ระวังกำแพงเอาไว้ด้วยนะ</level9_description_03>
+        <survivalmode_description>พยายามเอาชีวิตรอดและเก็บแอปเปิลให้มากที่สุด
+
+ระวังด้วยนะ!
+เมื่อเวลาผ่านไปสักพัก ระเบิดและกำแพงจะสุ่มปรากฏขึ้นมา</survivalmode_description>
+        <leaderboard_your_score>คะแนนของคุณ: </leaderboard_your_score>
+        <finish_all_level>ยินดีด้วย! คุณเล่นจบทุกเลเวลแล้ว</finish_all_level>
+        <win>ชนะ!</win>
+        <lose_score>คุณต้องเก็บแอปเปิลเพิ่ม!</lose_score>
+        <lose_hit_the_bomb>อย่ากินระเบิดนะ!</lose_hit_the_bomb>
+        <lose_hit_the_wall>อย่าชนกำแพงนะ!</lose_hit_the_wall>
+        <lose_hit_body>อย่ากินตัวเองนะ!</lose_hit_body>
+        <lose_hit_the_door>คุณต้องเก็บแอปเปิลเพิ่ม!</lose_hit_the_door>
+        <unlocked_door>ประตูปลดล็อคแล้ว!</unlocked_door>
+        <pop_up_next_level_description_1>กลับไปที่ตัวเลือกเลเวล</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>ไปที่ความยากระดับถัดไป</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>ไปที่เลเวลถัดไป</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>^ ยังไม่พอ</pop_up_next_level_description_4>
+        <leaderboard_you>คุณ</leaderboard_you>
+        <description_java>เกม snake ในตำนานกลับมาพร้อมกับอัพเดตเล็ก ๆ น้อย ๆ ที่จะทำให้การเล่นบนจอสีสนุกขึ้นอีก</description_java>
+        <enable_sound>ต้องการเปิดเสียงหรือไม่</enable_sound>
+    </language>
+    <language lang="vi">
+        <game_name>snake</game_name>
+        <text_language>ngôn ngữ</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>có</text_yes>
+        <text_no>không</text_no>
+        <press_5>bấm 5 để tiếp tục</press_5>
+        <text_play>chơi</text_play>
+        <text_sound_on>âm thanh: bật</text_sound_on>
+        <text_sound_off>âm thanh: tắt</text_sound_off>
+        <text_help>trợ giúp</text_help>
+        <text_exit>thoát</text_exit>
+        <confirm_mm>bạn muốn về menu chính?</confirm_mm>
+        <confirm_qq>bạn muốn thoát game?</confirm_qq>
+        <confirm_restart>bạn có muốn chơi lại?</confirm_restart>
+        <text_level>màn</text_level>
+        <title_in_game_menu>menu trong game</title_in_game_menu>
+        <text_resume>chơi tiếp</text_resume>
+        <text_restart>chơi lại</text_restart>
+        <text_main_menu>menu chính</text_main_menu>
+        <customer_care>chăm sóc khách hàng</customer_care>
+        <text_survival>sinh tồn</text_survival>
+        <text_about>giới thiệu</text_about>
+        <text_controls>điều khiển</text_controls>
+        <text_colours>màu</text_colours>
+        <title_power_ups>power-up</title_power_ups>
+        <title_leaderboard>bảng xếp hạng</title_leaderboard>
+        <text_difficult>độ khó</text_difficult>
+        <text_diff_1>dễ</text_diff_1>
+        <text_diff_2>thường</text_diff_2>
+        <text_diff_3>khó</text_diff_3>
+        <text_settings>cài đặt</text_settings>
+        <next_level>màn kế</next_level>
+        <new_record>chúc mừng!
+kỷ lục mới</new_record>
+        <tutorial_control>chọn chế độ điều khiển và thưởng thức game. bạn có thể đổi điều khiển ở menu tùy chọn.</tutorial_control>
+        <tutorial_color>chọn màu của bạn. bạn có thể đổi màu ở menu tùy chọn.</tutorial_color>
+        <credits_01>\1snake*
+phiên bản x.x.x
+© 2019 gameloft.
+
+bảo lưu mọi quyền. gameloft và lô gô của gameloft là các thương hiệu của gameloft ở mỹ và/hoặc các quốc gia khác.
+
+\1thông tin và chăm sóc khách hàng:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1giám đốc studio*
+phung viet hung
+
+\1giám đốc triển khai*
+alain etienne
+ngo thai duy
+
+\1đạo diễn sáng tạo*
+stefan zamfir</credits_02>
+        <credits_03>\1điều hành sản xuất*
+aurelien lavaud
+truong cong hieu
+
+\1sản xuất*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1trưởng thiết kế trò chơi*
+nguyen quoc dong
+mai anh duc
+
+\1thiết kế trò chơi*
+maxime weets
+ho dac the
+
+\1đồ họa*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1trưởng lập trình*
+ly hoang trung
+nguyen nguyen vu
+
+\1lập trình*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1giám đốc dự án kđcl*
+pham thi van an
+ly duc an
+
+\1kđcl*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1đạo diễn âm thanh*
+jorge peirano
+
+\1sản xuất âm thanh toàn cầu*
+ulrich frantz
+
+\1trưởng kĩ thuật âm thanh*
+ tran nhat thai tung
+
+\1kĩ thuật âm thanh*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1giám đốc bản địa hóa*
+alexis green-painchaud
+
+\1điều phối viên bản địa hóa*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1bản địa hóa tiếng việt*
+phạm diệp vân nhi
+nguyễn lê bảo đan</credits_09>
+        <help_page_1>2: đi lên
+4: sang trái
+6: sang phải
+8: đi xuống
+
+game cũng có thể chơi hoàn toàn bằng d-pad.
+
+</help_page_1>
+        <help_page_2>điều khiển tương ứng
+2 = d-pad lên
+4 = d-pad trái
+6 = d-pad phải
+8 = d-pad xuống</help_page_2>
+        <help_page_3>nếu bạn muốn rắn nhiều màu sắc hơn, bạn có thể đổi màu của nó ở menu tùy chọn.</help_page_3>
+        <help_page_4>tăng điểm và khiến rắn mọc dài hơn.</help_page_4>
+        <help_page_5>cẩn thận!!! nếu rắn ăn bom, bạn sẽ thua.</help_page_5>
+        <help_page_6>giúp rắn lượm táo dễ hơn.</help_page_6>
+        <help_page_7>có 2 hệ số nhân khác nhau: x2 và x4. chúng sẽ giúp rắn ghi thêm điểm khi rắn ăn táo.</help_page_7>
+        <help_page_8>rắn co lại còn một nửa và tốc độ giảm mạnh.</help_page_8>
+        <help_page_9>rắn sẽ trở nên bất bại và có thể chọc thủng tường.</help_page_9>
+        <level_unlock_description>bạn cần ^ ‰\d để mở khóa màn này.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>thử thách tính giờ</level_title_1>
+        <level1_description_01>mục tiêu: ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 10 quả.*
+
+gợi ý: đụng đuôi của mình sẽ bị thua nhưng đụng gờ màn hình thì không sao.</level1_description_01>
+        <level1_description_02>mục tiêu: ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 10 quả.*
+
+gợi ý: đụng đuôi của mình và đụng tường sẽ bị thua nhưng đụng gờ màn hình thì không sao.</level1_description_02>
+        <level1_description_03>mục tiêu: ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 10 quả.*
+
+gợi ý: đụng đuôi của mình và đụng tường sẽ bị thua nhưng đụng gờ màn hình thì không sao.</level1_description_03>
+        <level_title_2>thử thách ngang</level_title_2>
+        <level2_description_01>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 4 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level2_description_01>
+        <level2_description_02>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 6 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level2_description_02>
+        <level2_description_03>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 6 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level2_description_03>
+        <level_title_3>thử thách tính giờ rắn đấu rắn</level_title_3>
+        <level3_description_01>mục tiêu: ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao.</level3_description_01>
+        <level3_description_02>mục tiêu: ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level3_description_02>
+        <level3_description_03>mục tiêu: ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level3_description_03>
+        <level_title_4>thử thách dọc</level_title_4>
+        <level4_description_01>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 8 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level4_description_01>
+        <level4_description_02>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 8 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level4_description_02>
+        <level4_description_03>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 9 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level4_description_03>
+        <level_title_5>thử thách tính giờ với power-up</level_title_5>
+        <level5_description_01>dùng power-up để ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 20 quả.*
+
+gợi ý: đụng đuôi của mình sẽ bị thua nhưng đụng gờ màn hình thì không sao. coi chừng đụng bom.</level5_description_01>
+        <level5_description_02>dùng power-up để ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 25 quả.*
+
+gợi ý: đụng đuôi của mình sẽ bị thua nhưng đụng gờ màn hình thì không sao. coi chừng đụng bom và tường.</level5_description_02>
+        <level5_description_03>dùng power-up để ăn càng nhiều táo càng tốt trước khi hết giờ. \2bạn phải ăn ít nhất 25 quả.*
+
+gợi ý: đụng đuôi của mình sẽ bị thua nhưng đụng gờ màn hình thì không sao. coi chừng đụng bom và tường.</level5_description_03>
+        <level_title_6>thử thách dọc</level_title_6>
+        <level6_description_01>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 7 quả để mở cổng!*
+
+gợi ý: power-up có thể giúp bạn.</level6_description_01>
+        <level6_description_02>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 8 quả để mở cổng!*
+
+gợi ý: power-up có thể giúp bạn.</level6_description_02>
+        <level6_description_03>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 10 quả để mở cổng!*
+
+gợi ý: power-up có thể giúp bạn.</level6_description_03>
+        <level_title_7>thử thách tính giờ rắn đấu rắn với power-up</level_title_7>
+        <level7_description_01>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao.</level7_description_01>
+        <level7_description_02>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level7_description_02>
+        <level7_description_03>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ.
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level7_description_03>
+        <level_title_8>thử thách ngang</level_title_8>
+        <level8_description_01>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 8 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level8_description_01>
+        <level8_description_02>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 8 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level8_description_02>
+        <level8_description_03>mục tiêu: đi đến cuối màn bằng cách ăn đủ táo để mở cổng. \2ăn ít nhất 9 quả để mở cổng!*
+
+gợi ý: tránh mọi loại tường.</level8_description_03>
+        <level_title_9>thử thách tính giờ rắn đấu rắn với power-up</level_title_9>
+        <level9_description_01>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ. \2bạn phải ăn ít nhất 25 quả.*
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao.</level9_description_01>
+        <level9_description_02>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ. \2bạn phải ăn ít nhất 25 quả.*
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level9_description_02>
+        <level9_description_03>dùng power-up để ăn nhiều táo hơn đối thủ trước khi hết giờ. \2bạn phải ăn ít nhất 30 quả.*
+
+gợi ý: bạn có thể đi đè lên đối thủ mà không sao. coi chừng đụng tường.</level9_description_03>
+        <survivalmode_description>cố gắng sống sót và lấy càng nhiều táo càng tốt.
+
+nhớ cẩn thận!
+sau một thời gian, bom và tường sẽ xuất hiện ngẫu nhiên.</survivalmode_description>
+        <leaderboard_your_score>điểm của bạn: </leaderboard_your_score>
+        <finish_all_level>chúc mừng! bạn đã chơi xong tất cả màn.</finish_all_level>
+        <win>chiến thắng!</win>
+        <lose_score>bạn cần thêm táo!</lose_score>
+        <lose_hit_the_bomb>đừng ăn bom!</lose_hit_the_bomb>
+        <lose_hit_the_wall>đừng đụng tường!</lose_hit_the_wall>
+        <lose_hit_body>đừng tự ăn mình!</lose_hit_body>
+        <lose_hit_the_door>bạn cần thêm táo!</lose_hit_the_door>
+        <unlocked_door>cổng đã mở khóa!</unlocked_door>
+        <pop_up_next_level_description_1>về mục chọn màn</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>đến độ khó kế tiếp</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>đến màn sau</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>không đủ ^</pop_up_next_level_description_4>
+        <leaderboard_you>bạn</leaderboard_you>
+        <description_java>rắn săn mồi huyền thoại đã lột xác trở lại và chơi còn vui hơn nữa trên màn hình màu.</description_java>
+        <enable_sound>bạn có muốn bật âm thanh?</enable_sound>
+    </language>
+    <language lang="id">
+        <game_name>snake</game_name>
+        <text_language>bahasa</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>ya</text_yes>
+        <text_no>tidak</text_no>
+        <press_5>tekan 5 untuk melanjutkan</press_5>
+        <text_play>main</text_play>
+        <text_sound_on>suara: aktif</text_sound_on>
+        <text_sound_off>suara: nonaktif</text_sound_off>
+        <text_help>bantuan</text_help>
+        <text_exit>keluar</text_exit>
+        <confirm_mm>apa anda ingin kembali ke menu utama?</confirm_mm>
+        <confirm_qq>apa anda ingin keluar dari game?</confirm_qq>
+        <confirm_restart>apa anda ingin mengulangi?</confirm_restart>
+        <text_level>level</text_level>
+        <title_in_game_menu>menu dalam game</title_in_game_menu>
+        <text_resume>main lagi</text_resume>
+        <text_restart>ulangi</text_restart>
+        <text_main_menu>menu utama</text_main_menu>
+        <customer_care>layanan pelanggan</customer_care>
+        <text_survival>survival</text_survival>
+        <text_about>tentang</text_about>
+        <text_controls>kontrol</text_controls>
+        <text_colours>warna</text_colours>
+        <title_power_ups>power-up</title_power_ups>
+        <title_leaderboard>papan peringkat</title_leaderboard>
+        <text_difficult>tingkat kesukaran</text_difficult>
+        <text_diff_1>mudah</text_diff_1>
+        <text_diff_2>normal</text_diff_2>
+        <text_diff_3>sulit</text_diff_3>
+        <text_settings>pengaturan</text_settings>
+        <next_level>level berikutnya</next_level>
+        <new_record>selamat!
+rekor baru</new_record>
+        <tutorial_control>pilih skema kontrol dan nikmati game. anda bisa mengubah kontrol dalam menu opsi.</tutorial_control>
+        <tutorial_color>pilih warna. anda bisa mengubah warna dalam menu opsi.</tutorial_color>
+        <credits_01>\1snake*
+versi x.x.x
+© 2019 gameloft
+
+semua hak dilindungi undang-undang. gameloft dan logo gameloft adalah merek dagang gameloft di a.s. dan/atau negara lainnya.
+
+\1info dan layanan pelanggan:*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1manajer studio*
+phung viet hung
+
+\1manajer deployment*
+alain etienne
+ngo thai duy
+
+\1sutradara kreatif*
+stefan zamfir</credits_02>
+        <credits_03>\1produser eksekutif*
+aurelien lavaud
+truong cong hieu
+
+\1produser*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1pimpinan perancang game*
+nguyen quoc dong
+mai anh duc
+
+\1perancang game*
+maxime weets
+ho dac the
+
+\1artis*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1pimpinan programer*
+ly hoang trung
+nguyen nguyen vu
+
+\1programer*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1manajer proyek penjamin mutu*
+pham thi van an
+ly duc an
+
+\1penjamin mutu*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1sutradara audio*
+jorge peirano
+
+\1produser audio dunia*
+ulrich frantz
+
+\1pimpinan teknisi suara*
+ tran nhat thai tung
+
+\1teknisi suara*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1manajer pelokalan*
+alexis green-painchaud
+
+\1koordinator pelokalan*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1pelokalan*
+azizah laily
+rani puspitasari
+thomas hannover
+valentino wiwaswan</credits_09>
+        <help_page_1>2: bergerak ke atas
+4: bergerak ke kiri
+6: bergerak ke kanan
+8: bergerak ke bawah
+
+game juga dapat dimainkan menggunakan d-pad.
+
+</help_page_1>
+        <help_page_2>kontrol
+2 = d-pad atas
+4 = d-pad kiri
+6 = d-pad kanan
+8 = d-pad bawah</help_page_2>
+        <help_page_3>jika anda ingin ular menjadi lebih berwarna, anda bisa mengubahnya dalam menu opsi.</help_page_3>
+        <help_page_4>meningkatkan skor dan membuat ular semakin panjang.</help_page_4>
+        <help_page_5>hati-hati! jika ular memakan bom, anda akan kalah.</help_page_5>
+        <help_page_6>membantu ular mengumpulkan apel dengan lebih mudah.</help_page_6>
+        <help_page_7>terdapat 2 pengganda yang berbeda: x2 dan x4. pengganda akan membantu ular mendapatkan lebih banyak poin saat ular memakan apel.</help_page_7>
+        <help_page_8>menyusutkan ukuran ular hingga setengah dan mengurangi kecepatannya secara drastis.</help_page_8>
+        <help_page_9>ular akan menjadi tak terkalahkan dan bisa menembus dinding.</help_page_9>
+        <level_unlock_description>anda membutuhkan ^ ‰\d untuk membuka level ini.</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>tantangan waktu</level_title_1>
+        <level1_description_01>tujuan: makan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 10 apel.*
+
+petunjuk: mengenai ekor anda sendiri akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah.</level1_description_01>
+        <level1_description_02>tujuan: makan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 10 apel.*
+
+petunjuk: mengenai ekor anda sendiri akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah.</level1_description_02>
+        <level1_description_03>tujuan: makan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 10 apel.*
+
+petunjuk: mengenai dinding dan ekor anda sendiri akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah.</level1_description_03>
+        <level_title_2>tantangan horisontal</level_title_2>
+        <level2_description_01>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 4 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level2_description_01>
+        <level2_description_02>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 6 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level2_description_02>
+        <level2_description_03>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 6 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level2_description_03>
+        <level_title_3>tantangan waktu ular vs. ular</level_title_3>
+        <level3_description_01>tujuan: makan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman.</level3_description_01>
+        <level3_description_02>tujuan: makan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level3_description_02>
+        <level3_description_03>tujuan: makan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level3_description_03>
+        <level_title_4>tantangan vertikal</level_title_4>
+        <level4_description_01>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 8 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level4_description_01>
+        <level4_description_02>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 8 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level4_description_02>
+        <level4_description_03>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 9 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level4_description_03>
+        <level_title_5>tantangan waktu dengan power-up</level_title_5>
+        <level5_description_01>gunakan power up untuk memakan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 20 apel.*
+
+petunjuk: mengenai ekor akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah. waspadai bom.</level5_description_01>
+        <level5_description_02>gunakan power up untuk memakan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 25 apel.*
+
+petunjuk: mengenai ekor anda akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah. waspadai bom dan tembok.</level5_description_02>
+        <level5_description_03>gunakan power up untuk memakan apel sebanyak mungkin sebelum waktu habis. \2anda harus memakan setidaknya 25 apel.*
+
+petunjuk: mengenai ekor anda akan membuat anda kalah, tapi mengenai pinggir layar tidak akan membuat anda kalah. waspadai bom dan tembok.</level5_description_03>
+        <level_title_6>tantangan vertikal</level_title_6>
+        <level6_description_01>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 7 apel untuk membukanya!*
+
+petunjuk: power-up dapat membantu.</level6_description_01>
+        <level6_description_02>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 8 apel untuk membukanya!*
+
+petunjuk: power-up dapat membantu.</level6_description_02>
+        <level6_description_03>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 10 apel untuk membukanya!*
+
+petunjuk: power-up dapat membantu.</level6_description_03>
+        <level_title_7>tantangan waktu ular vs. ular dengan power-up</level_title_7>
+        <level7_description_01>gunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman.</level7_description_01>
+        <level7_description_02>gunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level7_description_02>
+        <level7_description_03>tgunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis.
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level7_description_03>
+        <level_title_8>tantangan horisontal</level_title_8>
+        <level8_description_01>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 8 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level8_description_01>
+        <level8_description_02>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 8 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level8_description_02>
+        <level8_description_03>target: capai akhir level dengan memakan apel untuk membuka gerbang. \2makan setidaknya 9 apel untuk membukanya!*
+
+petunjuk: hindari segala jenis tembok.</level8_description_03>
+        <level_title_9>tantangan waktu ular vs. ular dengan power-up</level_title_9>
+        <level9_description_01>gunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis. \2anda harus memakan setidaknya 25 apel.*
+
+petunjuk: anda bisa melewati lawan dengan aman.</level9_description_01>
+        <level9_description_02>gunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis. \2anda harus memakan setidaknya 25 apel.*
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level9_description_02>
+        <level9_description_03>gunakan power-up untuk memakan apel lebih banyak dari lawan sebelum waktu habis. \2anda harus memakan setidaknya 30 apel.*
+
+petunjuk: anda bisa melewati lawan dengan aman. waspadai tembok.</level9_description_03>
+        <survivalmode_description>bertahan dan dapatkan apel sebanyak mungkin.
+
+hati-hati!
+setelah beberapa saat, bom dan dinding akan muncul secara acak.</survivalmode_description>
+        <leaderboard_your_score>skormu: </leaderboard_your_score>
+        <finish_all_level>selamat! anda telah menuntaskan semua level.</finish_all_level>
+        <win>menang!</win>
+        <lose_score>anda membutuhkan lebih banyak apel!</lose_score>
+        <lose_hit_the_bomb>jangan makan bom!</lose_hit_the_bomb>
+        <lose_hit_the_wall>jangan menabrak dinding!</lose_hit_the_wall>
+        <lose_hit_body>jangan makan badan anda!</lose_hit_body>
+        <lose_hit_the_door>anda membutuhkan lebih banyak apel!</lose_hit_the_door>
+        <unlocked_door>gerbang terbuka!</unlocked_door>
+        <pop_up_next_level_description_1>kembali ke pemilihan level</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>pergi ke level kesukaran berikutnya</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>pergi ke level berikutnya</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>^ tidak cukup</pop_up_next_level_description_4>
+        <leaderboard_you>anda</leaderboard_you>
+        <description_java>snake yang legendaris kini kembali dengan sedikit pembaruan yang menjadikannya lebih seru untuk dimainkan di layar berwarna.</description_java>
+        <enable_sound>apa kamu ingin mengaktifkan suara?</enable_sound>
+    </language>
+    <language lang="sc">
+        <game_name>snake</game_name>
+        <text_language>语言</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>是</text_yes>
+        <text_no>否</text_no>
+        <press_5>按5继续</press_5>
+        <text_play>进行游戏</text_play>
+        <text_sound_on>声音： 开</text_sound_on>
+        <text_sound_off>声音： 关</text_sound_off>
+        <text_help>帮助</text_help>
+        <text_exit>退出</text_exit>
+        <confirm_mm>您确定要返回主菜单吗？</confirm_mm>
+        <confirm_qq>您要退出游戏吗？</confirm_qq>
+        <confirm_restart>您确定要重新开始吗？</confirm_restart>
+        <text_level>关卡</text_level>
+        <title_in_game_menu>游戏菜单</title_in_game_menu>
+        <text_resume>继续游戏</text_resume>
+        <text_restart>重新开始</text_restart>
+        <text_main_menu>主菜单</text_main_menu>
+        <customer_care>客户服务</customer_care>
+        <text_survival>生存模式</text_survival>
+        <text_about>关于</text_about>
+        <text_controls>控制</text_controls>
+        <text_colours>颜色</text_colours>
+        <title_power_ups>强化道具</title_power_ups>
+        <title_leaderboard>排行榜</title_leaderboard>
+        <text_difficult>难度</text_difficult>
+        <text_diff_1>简单</text_diff_1>
+        <text_diff_2>普通</text_diff_2>
+        <text_diff_3>困难</text_diff_3>
+        <text_settings>设置</text_settings>
+        <next_level>下一关</next_level>
+        <new_record>恭喜您！
+新纪录</new_record>
+        <tutorial_control>选择一种控制方案并 畅玩游戏。 您可以在选项菜单 中更改控制。</tutorial_control>
+        <tutorial_color>选择你的颜色。 你可以在选项菜单中更改颜色。</tutorial_color>
+        <credits_01>\1snake*
+版本 x.x.x
+© 2019 gameloft.
+
+保留所有权利。 gameloft 及 gameloft 标识为 gameloft 在美国及/或其他国家的注册商标。
+
+\1信息与客户服务：*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1工作室经理*
+phung viet hung
+
+\1调度经理*
+alain etienne
+ngo thai duy
+
+\1创意总监*
+stefan zamfir</credits_02>
+        <credits_03>\1执行制作人*
+aurelien lavaud
+truong cong hieu
+
+\1制作人*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1主游戏策划*
+nguyen quoc dong
+mai anh duc
+
+\1游戏策划*
+maxime weets
+ho dac the
+
+\1美术*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1主程序*
+ly hoang trung
+nguyen nguyen vu
+
+\1程序*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1测试项目经理*
+pham thi van an
+ly duc an
+
+\1测试*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1声音总监*
+jorge peirano
+
+\1全球声音制作人*
+ulrich frantz
+
+\1声音技术组长*
+ tran nhat thai tung
+
+\1声音技术员*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1本地化经理*
+alexis green-painchaud
+
+\1本地化协调*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1本地化*
+liao jiaqian
+li yuling
+wang qingying
+wei bi
+wei lai</credits_09>
+        <help_page_1>2： 上移
+4： 左移
+6： 右移
+8： 下移
+
+游戏也可以完全使用方向操 纵杆进行。
+
+</help_page_1>
+        <help_page_2>对应操作
+2 = 方向摇杆上
+4 = 方向摇杆左
+6 = 方向摇杆右
+8 = 方向摇杆下</help_page_2>
+        <help_page_3>如果你希望你的蛇更加五彩缤纷， 你可以在选项菜单中更改它的颜色。</help_page_3>
+        <help_page_4>提高分数并让蛇长得更长。</help_page_4>
+        <help_page_5>当心! 如果蛇吃到炸弹， 你就输了。</help_page_5>
+        <help_page_6>让蛇可以更轻易地收集苹果。</help_page_6>
+        <help_page_7>一共有2种不同的加倍道具： x2和 x4。 它们能让蛇在吃到苹果时 获得更多分数。</help_page_7>
+        <help_page_8>让蛇的体型缩小一半并大幅降 低它的速度。</help_page_8>
+        <help_page_9>让蛇进入无敌状态， 使之能够穿墙。</help_page_9>
+        <level_unlock_description>你需要 ^ ‰\d 才能解锁此关卡。</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>计时挑战</level_title_1>
+        <level1_description_01>目标： 在时间结束之前， 吃掉尽可能多的苹果。 \2你必须至少吃掉10个苹果。*
+
+提示： 咬到自己的尾巴会 导致游戏失败， 但撞到屏幕边缘不会。</level1_description_01>
+        <level1_description_02>目标： 在时间结束之前， 吃掉尽可能多的苹果。 \2你必须吃掉至少10个苹果。*
+
+提示： 咬到自己的尾巴或 撞墙会导致游戏失败， 但撞到屏幕边缘不会。</level1_description_02>
+        <level1_description_03>目标： 在时间结束之前， 吃掉尽可能多的苹果。 \2你必须吃掉至少10个苹果。 *
+
+提示： 咬到自己的尾巴或 撞墙会导致游戏失败， 但撞到屏幕边缘不会。</level1_description_03>
+        <level_title_2>水平挑战</level_title_2>
+        <level2_description_01>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃4个苹果才能开门！*
+
+提示： 避开各种墙。</level2_description_01>
+        <level2_description_02>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃6个苹果才能开门！*
+
+提示： 避开各种墙。</level2_description_02>
+        <level2_description_03>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃6个苹果才能开门！*
+
+提示： 避开各种墙。</level2_description_03>
+        <level_title_3>对抗限时挑战</level_title_3>
+        <level3_description_01>目标： 在时间耗尽前， 比对手吃掉更多苹果。
+
+提示： 你可以安全地从对手身上 跨过。</level3_description_01>
+        <level3_description_02>目标： 在时间耗尽前， 比对手吃掉更多苹果。
+
+提示： 你可以安全地从对手身上 跨过。 但小心不要撞上墙壁。</level3_description_02>
+        <level3_description_03>目标： 在时间耗尽前， 比对手吃掉更多苹果。
+
+提示： 你可以安全地从对手身上 跨过。 但小心不要撞上墙壁。</level3_description_03>
+        <level_title_4>竖直挑战</level_title_4>
+        <level4_description_01>目标： 吃到足够的 苹果以打开大门， 达到关卡结束点。 \2至少吃8个苹果才能开门！*
+
+提示： 避开各种墙。</level4_description_01>
+        <level4_description_02>目标： 吃到足够的 苹果以打开大门， 达到关卡结束点。 \2至少吃8个苹果才能开门！*
+
+提示： 避开各种墙。</level4_description_02>
+        <level4_description_03>目标： 吃到足够 的苹果以打开大门， 达到关卡结束点。 \2至少吃9个苹果才能开门！*
+
+提示： 避开各种墙。</level4_description_03>
+        <level_title_5>道具计时挑战</level_title_5>
+        <level5_description_01>借助道具, 在计时结束之 前尽可能多地吃掉苹果。 \2你必须吃掉至少20个苹果。*
+
+提示： 咬到自己的尾 巴会导致游戏失败， 但撞到屏幕边缘不会。 小心炸弹。 </level5_description_01>
+        <level5_description_02>借助道具, 在计时结束之 前尽可能多地吃掉苹果。 \2你必须吃掉至少25个苹果。*
+
+提示： 咬到自己的尾巴会 导致游戏失败， 但撞到屏幕边缘不会。 小心炸弹和墙壁。 </level5_description_02>
+        <level5_description_03>借助道具, 在计时结束之 前尽可能多地吃掉苹果。 \2你必须吃掉至少25个苹果。*
+
+提示： 咬到自己的尾巴会 导致游戏失败, 但撞到屏幕边缘不会。 小心炸弹和墙壁。 </level5_description_03>
+        <level_title_6>竖直挑战</level_title_6>
+        <level6_description_01>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃7个苹果才能开门！*
+
+提示： 道具能助你一臂之力。</level6_description_01>
+        <level6_description_02>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃8个苹果才能开门！*
+
+提示： 道具能助你一臂之力。</level6_description_02>
+        <level6_description_03>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃10个苹果才能开门！*
+
+提示： 道具能助你一臂之力。</level6_description_03>
+        <level_title_7>对抗道具计时赛</level_title_7>
+        <level7_description_01>在时间结束前, 借助道具， 吃掉比对手更多的苹果。
+
+提示： 你可以安全地从对手 身上跨过。</level7_description_01>
+        <level7_description_02>在时间结束前, 借助道具， 吃掉比对手更多的苹果。
+
+提示： 你可以安全地从对手 身上跨过。 但小心不要撞上墙壁。</level7_description_02>
+        <level7_description_03>在时间结束前, 借助道具， 吃掉比对手更多的苹果。
+
+提示： 你可以安全地从对手 身上跨过。但小心不要撞上墙壁。</level7_description_03>
+        <level_title_8>水平挑战</level_title_8>
+        <level8_description_01>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃8个苹果才能开门！*
+
+提示： 避开各种墙。</level8_description_01>
+        <level8_description_02>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃8个苹果才能开门！*
+
+提示： 避开各种墙。</level8_description_02>
+        <level8_description_03>目标： 吃到足够的苹果以打开大门， 达到关卡结束点。 \2至少吃9个苹果才能开门！*
+
+提示： 避开各种墙。</level8_description_03>
+        <level_title_9>两蛇道具限时挑战</level_title_9>
+        <level9_description_01>在时间结束前, 借助道具， 吃掉比对手更多的苹果。 \2你必须吃掉至少25个苹果。*
+
+提示： 你可以安全地从对手 身上跨过。</level9_description_01>
+        <level9_description_02>在时间结束前, 借助道具， 吃掉比对手更多的苹果。 \2你必须吃掉至少25个苹果。*
+
+提示： 你可以安全地从对手 身上跨过。 但小心不要撞上 墙壁。</level9_description_02>
+        <level9_description_03>在时间结束前, 借助道具， 吃掉比对手更多的苹果。 \2你必须吃掉至少30个苹果。*
+
+提示： 你可以安全地从 对手身上跨过。 但小心不要撞上墙壁。</level9_description_03>
+        <survivalmode_description>尽力活下来并收集尽可能多的苹果。
+
+当心！
+一段时间之后，炸弹和墙会随机出现。</survivalmode_description>
+        <leaderboard_your_score>你的得分： </leaderboard_your_score>
+        <finish_all_level>恭喜! 你完成了所有关卡。</finish_all_level>
+        <win>胜利！</win>
+        <lose_score>你还需要更多苹果！</lose_score>
+        <lose_hit_the_bomb>别吃炸弹！</lose_hit_the_bomb>
+        <lose_hit_the_wall>别撞墙！</lose_hit_the_wall>
+        <lose_hit_body>别吃自己的身体！</lose_hit_body>
+        <lose_hit_the_door>你还需要更多苹果！</lose_hit_the_door>
+        <unlocked_door>大门解锁！</unlocked_door>
+        <pop_up_next_level_description_1>返回关卡选择</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>前往下一个难度</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>前往下一个关卡</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>    不足</pop_up_next_level_description_4>
+        <leaderboard_you>您</leaderboard_you>
+        <description_java>传奇的snake游戏强势归来，小小更新让您可以在彩屏上畅玩，为您带来更大乐趣。</description_java>
+        <enable_sound>是否开启声音？</enable_sound>
+    </language>
+    <language lang="tc">
+        <game_name>snake</game_name>
+        <text_language>語言</text_language>
+        <english>english</english>
+        <brazilian>português-br</brazilian>
+        <spanish>español</spanish>
+        <portuguese>português</portuguese>
+        <russian>русский</russian>
+        <vietnamese>tiếng việt</vietnamese>
+        <indonesian>bahasa indonesia</indonesian>
+        <french>français</french>
+        <thai>ภาษาไทย</thai>
+        <italian>italiano</italian>
+        <german>deutsch</german>
+        <chinese_sc>简体中文</chinese_sc>
+        <text_yes>是</text_yes>
+        <text_no>否</text_no>
+        <press_5>按5繼續</press_5>
+        <text_play>開始遊戲</text_play>
+        <text_sound_on>聲音：開</text_sound_on>
+        <text_sound_off>聲音：關</text_sound_off>
+        <text_help>說明</text_help>
+        <text_exit>退出</text_exit>
+        <confirm_mm>你確定要返回主選單嗎？</confirm_mm>
+        <confirm_qq>你要退出遊戲嗎？</confirm_qq>
+        <confirm_restart>你確定要重新開始嗎？</confirm_restart>
+        <text_level>關卡</text_level>
+        <title_in_game_menu>遊戲選單</title_in_game_menu>
+        <text_resume>繼續遊戲</text_resume>
+        <text_restart>重新開始</text_restart>
+        <text_main_menu>主選單</text_main_menu>
+        <customer_care>客戶服務</customer_care>
+        <text_survival>生存模式</text_survival>
+        <text_about>關於</text_about>
+        <text_controls>控制</text_controls>
+        <text_colours>顏色</text_colours>
+        <title_power_ups>道具</title_power_ups>
+        <title_leaderboard>排行榜</title_leaderboard>
+        <text_difficult>難度</text_difficult>
+        <text_diff_1>簡單</text_diff_1>
+        <text_diff_2>普通</text_diff_2>
+        <text_diff_3>困難</text_diff_3>
+        <text_settings>設定</text_settings>
+        <next_level>下一關</next_level>
+        <new_record>恭喜！
+新紀錄</new_record>
+        <tutorial_control>選擇一種控制方案來暢玩遊戲。 你可以在選項選單中更改控制項。</tutorial_control>
+        <tutorial_color>選擇你的顏色。你可以在選項選單中更改顏色。</tutorial_color>
+        <credits_01>\1snake*
+版本 x.x.x
+© 2019 gameloft. 
+
+版權所有。gameloft 及 gameloft 標誌為 gameloft 在美國及/或其他國家的商標。
+
+\1資訊與客戶服務：*
+www.gameloft.com
+support.gameloft.com</credits_01>
+        <credits_02>\1工作室經理*
+phung viet hung
+
+\1部署經理*
+alain etienne
+ngo thai duy
+
+\1創意總監*
+stefan zamfir</credits_02>
+        <credits_03>\1執行製作人*
+aurelien lavaud
+truong cong hieu
+
+\1製作人*
+tran thuy ai
+bui khanh thanh</credits_03>
+        <credits_04>\1遊戲企劃組長*
+nguyen quoc dong
+mai anh duc
+
+\1遊戲企劃小組*
+maxime weets
+ho dac the
+
+\1美術小組*
+tran thi to kieu
+do pham truc duyen</credits_04>
+        <credits_05>\1程式設計組長*
+ly hoang trung
+nguyen nguyen vu
+
+\1程式設計小組*
+dao ngoc hoang
+mai xuan tien
+nguyen cong tri dung
+nguyen tuan kiet
+phan vinh phuc</credits_05>
+        <credits_06>\1專案品保經理*
+pham thi van an
+ly duc an
+
+\1品保小組*
+nguyen huu phuc
+pham anh tai
+nguyen minh son</credits_06>
+        <credits_07>\1音效總監*
+jorge peirano
+
+\1全球音效製作人*
+ulrich frantz
+
+\1聲音技術組長*
+ tran nhat thai tung
+
+\1聲音技術小組*
+tran trong qui
+nicolas arsenault
+francois suter
+ishari sahida</credits_07>
+        <credits_08>\1翻譯經理*
+alexis green-painchaud
+
+\1翻譯協調員*
+alicja buffa
+fred leung
+catherine boudreault
+eric millette</credits_08>
+        <credits_09>\1翻譯小組*
+tuo-kai wang
+kay tang
+pin-i chu
+jung-jung pao
+chris yiu</credits_09>
+        <help_page_1>2：向上移動
+4：向左移動
+6：向右移動
+8：向下移動
+
+你亦可以使用方向鍵來玩遊戲。
+
+</help_page_1>
+        <help_page_2>對應操作
+2 = 方向鍵上
+4 = 方向鍵左
+6 = 方向鍵右
+8 = 方向鍵下</help_page_2>
+        <help_page_3>如果你希望你的蛇更加色彩繽紛，你可以在選項選單中更改牠的顏色。</help_page_3>
+        <help_page_4>提高分數並讓蛇長得更長。</help_page_4>
+        <help_page_5>小心! 如果蛇吃到炸彈，你就輸了。</help_page_5>
+        <help_page_6>讓蛇更輕易地收集到蘋果。</help_page_6>
+        <help_page_7>遊戲有2種不同的倍化道具：x2和 x4。 它們能讓蛇在吃到蘋果時獲得更多分數。</help_page_7>
+        <help_page_8>讓蛇的體型縮小一半並大幅降低其速度。</help_page_8>
+        <help_page_9>讓蛇進入無敵狀態，並可穿過牆壁。</help_page_9>
+        <level_unlock_description>你需要 ^ ‰\d 才能解鎖此關卡。</level_unlock_description>
+        <level_have_head>^ ‰\d</level_have_head>
+        <level_title_1>限時挑戰</level_title_1>
+        <level1_description_01>目標：在時間結束之前，吃掉愈多蘋果愈好。 \2你必須吃掉至少10個蘋果。*
+
+提示：咬到自己的尾巴就失敗了，但撞到螢幕邊緣則不會。</level1_description_01>
+        <level1_description_02>目標：在時間結束之前，吃掉愈多蘋果愈好。 \2你必須吃掉至少10個蘋果。*
+
+提示：咬到自己的尾巴或撞到牆壁就失敗了，但撞到螢幕邊緣則不會。</level1_description_02>
+        <level1_description_03>目標：在時間結束之前，吃掉愈多蘋果愈好。 \2你必須吃掉至少10個蘋果。*
+
+提示：咬到自己的尾巴或撞到牆壁就失敗了，但撞到螢幕邊緣則不會。</level1_description_03>
+        <level_title_2>橫向挑戰</level_title_2>
+        <level2_description_01>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少4個蘋果才能開門！*
+
+提示：避開各種牆壁。</level2_description_01>
+        <level2_description_02>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少6個蘋果才能開門！*
+
+提示：避開各種牆壁。</level2_description_02>
+        <level2_description_03>目標：吃到足夠的蘋果以打開閘門，達到關卡結束點。 \2你必須吃掉至少6個蘋果才能開門！*
+
+提示：避開各種牆。</level2_description_03>
+        <level_title_3>限時對戰</level_title_3>
+        <level3_description_01>目標：在倒數結束前，比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過。</level3_description_01>
+        <level3_description_02>目標：在倒數結束前，比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level3_description_02>
+        <level3_description_03>目標：在倒數結束前，比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level3_description_03>
+        <level_title_4>直向挑戰</level_title_4>
+        <level4_description_01>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少8個蘋果才能開門！*
+
+提示：避開各種牆壁。</level4_description_01>
+        <level4_description_02>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少8個蘋果才能開門！*
+
+提示：避開各種牆壁。</level4_description_02>
+        <level4_description_03>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少9個蘋果才能開門！*
+
+提示：避開各種牆壁。</level4_description_03>
+        <level_title_5>道具限時挑戰</level_title_5>
+        <level5_description_01>使用道具，在計時結束之前吃掉愈多蘋果愈好。 \2你必須吃掉至少20個蘋果。*
+
+提示：咬到自己的尾巴就失敗了，但撞到螢幕邊緣則不會。小心炸彈。</level5_description_01>
+        <level5_description_02>使用道具，在計時結束之前吃掉愈多蘋果愈好。 \2你必須吃掉至少25個蘋果。*
+
+提示：咬到自己的尾巴就失敗了，但撞到螢幕邊緣則不會。小心炸彈和牆壁。</level5_description_02>
+        <level5_description_03>使用道具，在計時結束之前吃掉愈多蘋果愈好。 \2你必須吃掉至少25個蘋果。*
+
+提示：咬到自己的尾巴就失敗了，但撞到螢幕邊緣則不會。 小心炸彈和牆壁。</level5_description_03>
+        <level_title_6>直向挑戰</level_title_6>
+        <level6_description_01>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少7個蘋果才能開門！*
+
+提示：道具能助你一臂之力。</level6_description_01>
+        <level6_description_02>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少8個蘋果才能開門！*
+
+提示：道具能助你一臂之力。</level6_description_02>
+        <level6_description_03>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少10個蘋果才能開門！*
+
+提示：道具能助你一臂之力。</level6_description_03>
+        <level_title_7>道具對抗限時賽</level_title_7>
+        <level7_description_01>在倒數結束前，使用道具以比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過。</level7_description_01>
+        <level7_description_02>在倒數結束前，使用道具以比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level7_description_02>
+        <level7_description_03>在倒數結束前，使用道具以比對手吃掉更多蘋果。
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level7_description_03>
+        <level_title_8>橫向挑戰</level_title_8>
+        <level8_description_01>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少8個蘋果才能開門！*
+
+提示：避開各種牆壁。</level8_description_01>
+        <level8_description_02>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少8個蘋果才能開門！*
+
+提示：避開各種牆壁。</level8_description_02>
+        <level8_description_03>目標：吃掉一定數量的蘋果以打開閘門，到達關卡終點。 \2你必須吃掉至少9個蘋果才能開門！*
+
+提示：避開各種牆壁。</level8_description_03>
+        <level_title_9>道具對抗限時賽</level_title_9>
+        <level9_description_01>在倒數結束前，使用道具以比對手吃掉更多蘋果。 \2你必須吃掉至少25個蘋果。*
+
+提示：你可以安全地從對手身上跨過。</level9_description_01>
+        <level9_description_02>在倒數結束前，使用道具以比對手吃掉更多蘋果。 \2你必須吃掉至少25個蘋果。*
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level9_description_02>
+        <level9_description_03>在倒數結束前，使用道具以比對手吃掉更多蘋果。 \2你必須吃掉至少30個蘋果。*
+
+提示：你可以安全地從對手身上跨過，但小心不要撞上牆壁。</level9_description_03>
+        <survivalmode_description>試著不要死並收集愈多蘋果愈好。
+
+小心！
+在一段時間後，炸彈和牆壁會隨機出現。</survivalmode_description>
+        <leaderboard_your_score>你的分數：</leaderboard_your_score>
+        <finish_all_level>恭喜！你完成了所有關卡。</finish_all_level>
+        <win>勝利！</win>
+        <lose_score>你需要更多蘋果！</lose_score>
+        <lose_hit_the_bomb>別吃炸彈！</lose_hit_the_bomb>
+        <lose_hit_the_wall>別撞上牆壁！</lose_hit_the_wall>
+        <lose_hit_body>別吃自己的身體！</lose_hit_body>
+        <lose_hit_the_door>你需要更多蘋果！</lose_hit_the_door>
+        <unlocked_door>閘門解鎖了！</unlocked_door>
+        <pop_up_next_level_description_1>返回關卡選擇</pop_up_next_level_description_1>
+        <pop_up_next_level_description_2>玩下一個難度</pop_up_next_level_description_2>
+        <pop_up_next_level_description_3>前往下一個關卡</pop_up_next_level_description_3>
+        <pop_up_next_level_description_4>^不足</pop_up_next_level_description_4>
+        <leaderboard_you>你</leaderboard_you>
+        <description_java>傳奇的《snake》貪食蛇遊戲強勢歸來，小小更新讓你可以在彩色螢幕上暢玩，帶來更多精彩樂趣。</description_java>
+        <enable_sound>是否開啟聲音？</enable_sound>
+    </language>
+</loc>

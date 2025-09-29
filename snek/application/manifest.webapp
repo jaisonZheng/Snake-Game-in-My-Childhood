@@ -1,0 +1,20 @@
+{
+    "display": "Snake",
+	"name": "Snake឵឵",
+    "description": "Snake from Nokia phones",
+    "launch_path": "/index.html",
+    "fullscreen": "true",
+    "type": "certified",
+    "icons": {
+        "16": "/icon-16.png",
+        "48": "/icon-32.png",
+        "60": "/icon-114.png",
+        "128": "/icon-128.png"
+    },
+	"origin": "app://snake.gaiamobilism.net",
+    "developer": {
+        "name": "Gameloft",
+        "url": "http://gameloft.com"
+    },
+    "version": "2.2"
+}
