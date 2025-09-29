@@ -36,6 +36,6 @@ void GameOverState::draw(Game* game)
     // 绘制游戏结束界面
     draw_background();
 
-    draw_text_centered(160, "游戏结束", 48, 0x00FF6666);
-    draw_text_centered(230, "按空格或回车重新开始", 28, 0x00FFFFFF);
+    draw_text_centered(160, "游戏结束", 24, 0x00FF6666);
+    draw_text_centered(230, "按空格或回车重新开始", 14, 0x00FFFFFF);
 }

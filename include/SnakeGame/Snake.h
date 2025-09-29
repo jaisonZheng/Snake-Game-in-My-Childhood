@@ -8,7 +8,6 @@ using std::deque; // 实在是不想敲那么多次std了
 // 一开始本来想用<utility>中的vector的，但这样其实代码清晰度不足（不知道first对应什么）
 // 最终还是决定用struct
 
-
 class Snake
 {
 private:
@@ -16,6 +15,7 @@ private:
     int length;
     Direction direction;
     deque <Coord> body;
+    bool turn_locked;
     
 public:
     Snake();
@@ -28,7 +28,7 @@ public:
     void move(const MapSize& boundary, bool is_eating_food = false);
     void reset(const MapSize& map_size);
     
-    // Getter方法
+    // Game类作为主要类，应当能够获得snake的各种信息。
     const Coord& get_head() const { return head; }
     const Direction& get_direction() const { return direction; }
     const deque<Coord>& get_body() const { return body; }

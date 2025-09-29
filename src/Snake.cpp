@@ -13,12 +13,13 @@ Snake::Snake()
     显然已开始蛇的蛇头应当出现在一个固定的位置，
     未指定时，蛇身的长度为0，但是要初始化蛇身vector
     蛇速未定，（注意 速度应当是世界的规则（即多久更新一次frame））
-    头方向朝右
+    头方向朝下
     */
     head = Coord{0, 0};
     length = 1;
-    direction = Direction::RIGHT;
+    direction = Direction::DOWN;
     body = deque<Coord>{};
+    turn_locked = false;
 }
 
 Snake::Snake(const Coord& initialCoord, const Direction& initialDir)
@@ -27,6 +28,7 @@ Snake::Snake(const Coord& initialCoord, const Direction& initialDir)
     length = 1;
     direction = initialDir;
     body = deque<Coord>{};
+    turn_locked = false;
 }
 
 bool Snake::is_crash_itself()
@@ -43,9 +45,20 @@ bool Snake::is_crash_itself()
 
 void Snake::turn(const Direction& dir)
 {
+    if (turn_locked)
+    {
+        return;
+    }
+
+    if (dir == direction)
+    {
+        return;
+    }
+
     if (dir != oppositeDir(direction))
     {
         direction = dir;
+        turn_locked = true;
     }
 }
 
@@ -90,16 +103,18 @@ void Snake::move(const MapSize& boundary, bool is_eating_food)
 
     head = nextCoord;
     length = static_cast<int>(body.size()) + 1;
+    turn_locked = false;
 }
 
 void Snake::reset(const MapSize& map_size)
 {
     body.clear();
-    direction = Direction::RIGHT;
+    direction = Direction::DOWN;
 
     const int max_x = std::max(1, map_size.width / CELL_SIZE);
     const int max_y = std::max(1, map_size.height / CELL_SIZE);
 
     head = { max_x / 2, max_y / 2 };
     length = 1;
+    turn_locked = false;
 }

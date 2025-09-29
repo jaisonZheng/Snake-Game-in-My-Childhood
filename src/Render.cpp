@@ -4,22 +4,43 @@
 #include <filesystem>
 #include <string>
 #include <stdexcept>
+#include <array>
+#include <algorithm>
+#include <cstdlib>
+#include <utility>
 
-
+// 所有跟ege这个垃圾图形库有关的东西全部在这个文件中搞定。
+// 这个图形库真的是依托答辩，我实在是搞不懂配环境就要配6h+的垃圾图形库怎么会有人用。
+// 还有这个狗屎image显示 显示png的透明部分都这么麻烦，，，，
 
 namespace
 {
 	bool g_initialized = false;
-	
+
+	constexpr unsigned char OPAQUE_ALPHA = 0xFF;
+
 	// 图片资源
 	PIMAGE g_bg_image = nullptr;
 	PIMAGE g_apple_image = nullptr;
 	PIMAGE g_snake_head_image = nullptr;
 	PIMAGE g_snake_body_image = nullptr;
-	PIMAGE g_wall_image = nullptr;
 
-	constexpr int SNAKE_BODY_FRAMES = 9;
-	constexpr int SNAKE_BODY_SIZE = CELL_SIZE;
+	color_t g_apple_key = 0;
+	void release_snake_variants(); // Forward declaration
+	std::array<PIMAGE, 4> g_snake_head_variants{};
+	std::array<PIMAGE, 4> g_snake_body_variants{};
+
+	color_t g_snake_head_key = 0;
+	color_t g_snake_body_key = 0;
+
+	int g_bg_width = 0;
+	int g_bg_height = 0;
+	int g_apple_width = CELL_SIZE;
+	int g_apple_height = CELL_SIZE;
+	int g_snake_head_width = CELL_SIZE;
+	int g_snake_head_height = CELL_SIZE;
+	int g_snake_body_width = CELL_SIZE;
+	int g_snake_body_height = CELL_SIZE;
 
 	std::string resolve_asset_path(const std::string& filename)
 	{
@@ -50,15 +71,177 @@ namespace
 		}
 		return image;
 	}
-}
 
-	MapSize get_default_map_size()
+	int cell_to_pixel_centered(int cell_value, int image_size)
 	{
-		PIMAGE temp = load_image("bg_ap.png");
-		MapSize size{ getwidth(temp), getheight(temp) };
-		delimage(temp);
-		return size;
+		return cell_value * CELL_SIZE + (CELL_SIZE - image_size) / 2;
 	}
+
+	int direction_to_index(Direction dir)
+	{
+		switch (dir)
+		{
+		case Direction::UP:
+			return 0;
+		case Direction::DOWN:
+			return 1;
+		case Direction::LEFT:
+			return 2;
+		case Direction::RIGHT:
+			return 3;
+		}
+		return 0;
+	}
+
+	std::pair<int, int> rotate_point(int x, int y, Direction dir, int size)
+	{
+		switch (dir)
+		{
+		case Direction::DOWN:
+			return { x, y };
+		case Direction::UP:
+			return { size - 1 - x, size - 1 - y };
+		case Direction::LEFT:
+			return { size - 1 - y, x };
+		case Direction::RIGHT:
+			return { y, size - 1 - x };
+		}
+		return { x, y };
+	}
+
+	PIMAGE make_oriented_image(PIMAGE src, color_t transparent, Direction dir, int width, int height)
+	{
+		const int size = std::min(width, height);
+		PIMAGE dst = newimage(size, size);
+		for (int py = 0; py < size; ++py)
+		{
+			for (int px = 0; px < size; ++px)
+			{
+				putpixel(px, py, transparent, dst);
+			}
+		}
+
+		for (int sy = 0; sy < size; ++sy)
+		{
+			for (int sx = 0; sx < size; ++sx)
+			{
+				color_t color = getpixel(sx, sy, src);
+				if (color == transparent)
+				{
+					continue;
+				}
+				auto [dx, dy] = rotate_point(sx, sy, dir, size);
+				putpixel(dx, dy, color, dst);
+			}
+		}
+
+		return dst;
+	}
+
+	int wrap_delta(int delta, int max_value)
+	{
+		if (delta > max_value / 2)
+		{
+			delta -= max_value;
+		}
+		if (delta < -max_value / 2)
+		{
+			delta += max_value;
+		}
+		return delta;
+	}
+
+	Direction direction_from_points(const Coord& from, const Coord& to)
+	{
+		int dx = wrap_delta(to.x - from.x, TILE_COUNT.width);
+		int dy = wrap_delta(to.y - from.y, TILE_COUNT.height);
+
+		if (std::abs(dx) >= std::abs(dy))
+		{
+			if (dx > 0)
+			{
+				return Direction::RIGHT;
+			}
+			if (dx < 0)
+			{
+				return Direction::LEFT;
+			}
+		}
+		if (dy > 0)
+		{
+			return Direction::DOWN;
+		}
+		if (dy < 0)
+		{
+			return Direction::UP;
+		}
+		return Direction::DOWN;
+	}
+
+	void build_snake_variants()
+	{
+
+		if (g_snake_head_image)
+		{
+			g_snake_head_key = getpixel(0, 0, g_snake_head_image);
+			g_snake_head_width = getwidth(g_snake_head_image);
+			g_snake_head_height = getheight(g_snake_head_image);
+
+			g_snake_head_variants[direction_to_index(Direction::DOWN)] = g_snake_head_image;
+			g_snake_head_variants[direction_to_index(Direction::UP)] = make_oriented_image(g_snake_head_image, g_snake_head_key, Direction::UP, g_snake_head_width, g_snake_head_height);
+			g_snake_head_variants[direction_to_index(Direction::LEFT)] = make_oriented_image(g_snake_head_image, g_snake_head_key, Direction::LEFT, g_snake_head_width, g_snake_head_height);
+			g_snake_head_variants[direction_to_index(Direction::RIGHT)] = make_oriented_image(g_snake_head_image, g_snake_head_key, Direction::RIGHT, g_snake_head_width, g_snake_head_height);
+
+			for (Direction dir : { Direction::UP, Direction::LEFT, Direction::RIGHT })
+			{
+				int idx = direction_to_index(dir);
+				if (!g_snake_head_variants[idx])
+				{
+					g_snake_head_variants[idx] = g_snake_head_image;
+				}
+			}
+		}
+
+		if (g_snake_body_image)
+		{
+			g_snake_body_key = getpixel(0, 0, g_snake_body_image);
+			g_snake_body_width = getwidth(g_snake_body_image);
+			g_snake_body_height = getheight(g_snake_body_image);
+
+			g_snake_body_variants[direction_to_index(Direction::DOWN)] = g_snake_body_image;
+			g_snake_body_variants[direction_to_index(Direction::UP)] = make_oriented_image(g_snake_body_image, g_snake_body_key, Direction::UP, g_snake_body_width, g_snake_body_height);
+			g_snake_body_variants[direction_to_index(Direction::LEFT)] = make_oriented_image(g_snake_body_image, g_snake_body_key, Direction::LEFT, g_snake_body_width, g_snake_body_height);
+			g_snake_body_variants[direction_to_index(Direction::RIGHT)] = make_oriented_image(g_snake_body_image, g_snake_body_key, Direction::RIGHT, g_snake_body_width, g_snake_body_height);
+
+			for (Direction dir : { Direction::UP, Direction::LEFT, Direction::RIGHT })
+			{
+				int idx = direction_to_index(dir);
+				if (!g_snake_body_variants[idx])
+				{
+					g_snake_body_variants[idx] = g_snake_body_image;
+				}
+			}
+		}
+	}
+
+	void release_snake_variants()
+	{
+		const auto release = [](std::array<PIMAGE, 4>& variants, PIMAGE base)
+		{
+			for (auto& img : variants)
+			{
+				if (img && img != base)
+				{
+					delimage(img);
+				}
+				img = nullptr;
+			}
+		};
+
+		release(g_snake_head_variants, g_snake_head_image);
+		release(g_snake_body_variants, g_snake_body_image);
+	}
+}
 
 void initialize(const MapSize& size)
 {
@@ -77,7 +260,33 @@ void initialize(const MapSize& size)
 		g_apple_image = load_image("apple-sheet0.png");
 		g_snake_head_image = load_image("snake_lock_head-sheet0.png");
 		g_snake_body_image = load_image("snake_body-sheet0.png");
-		g_wall_image = load_image("tbstaticwall.png");
+
+		if (g_bg_image)
+		{
+			g_bg_width = getwidth(g_bg_image);
+			g_bg_height = getheight(g_bg_image);
+		}
+
+		if (g_apple_image)
+		{
+			g_apple_width = getwidth(g_apple_image);
+			g_apple_height = getheight(g_apple_image);
+			g_apple_key = getpixel(0, 0, g_apple_image);
+		}
+
+		if (g_snake_head_image)
+		{
+			g_snake_head_width = getwidth(g_snake_head_image);
+			g_snake_head_height = getheight(g_snake_head_image);
+		}
+
+		if (g_snake_body_image)
+		{
+			g_snake_body_width = getwidth(g_snake_body_image);
+			g_snake_body_height = getheight(g_snake_body_image);
+		}
+
+		build_snake_variants();
 	}
 	catch (const std::exception&)
 	{
@@ -96,11 +305,27 @@ void shutdown()
 	}
 
 	// 释放图片资源
-	if (g_bg_image) delimage(g_bg_image);
-	if (g_apple_image) delimage(g_apple_image);
-	if (g_snake_head_image) delimage(g_snake_head_image);
-	if (g_snake_body_image) delimage(g_snake_body_image);
-	if (g_wall_image) delimage(g_wall_image);
+	release_snake_variants();
+	if (g_bg_image)
+	{
+		delimage(g_bg_image);
+		g_bg_image = nullptr;
+	}
+	if (g_apple_image)
+	{
+		delimage(g_apple_image);
+		g_apple_image = nullptr;
+	}
+	if (g_snake_head_image)
+	{
+		delimage(g_snake_head_image);
+		g_snake_head_image = nullptr;
+	}
+	if (g_snake_body_image)
+	{
+		delimage(g_snake_body_image);
+		g_snake_body_image = nullptr;
+	}
 
 	closegraph();
 	g_initialized = false;
@@ -183,61 +408,72 @@ void draw_background()
 {
 	if (g_bg_image)
 	{
-		putimage(0, 0, g_bg_image);
+		int x = (getwidth() - g_bg_width) / 2;
+		int y = (getheight() - g_bg_height) / 2;
+		putimage(x, y, g_bg_image);
 	}
 }
 
 // 绘制苹果
 void draw_apple(const Coord& position)
 {
-	if (g_apple_image)
+	if (!g_apple_image)
 	{
-		putimage(position.x * CELL_SIZE, position.y * CELL_SIZE, g_apple_image);
+		return;
 	}
+
+	const int tile_left = position.x * CELL_SIZE;
+	int x = tile_left + (CELL_SIZE - g_apple_width) / 2;
+	const int tile_bottom = (position.y + 1) * CELL_SIZE;
+	int y = tile_bottom - g_apple_height;
+	putimage_transparent(nullptr, g_apple_image, x, y, g_apple_key);
 }
 
 // 绘制蛇头
 void draw_snake_head(const Coord& position, const Direction& direction)
 {
-	if (g_snake_head_image)
+	if (!g_snake_head_image)
 	{
-		PIMAGE temp = newimage(CELL_SIZE, CELL_SIZE);
-		getimage(temp, g_snake_head_image, 0, 0, CELL_SIZE, CELL_SIZE);
-
-		int x = position.x * CELL_SIZE;
-		int y = position.y * CELL_SIZE;
-
-		putimage(x, y, temp);
-		delimage(temp);
+		return;
 	}
+
+	const int index = direction_to_index(direction);
+	PIMAGE oriented = g_snake_head_variants[index] ? g_snake_head_variants[index] : g_snake_head_image;
+	int x = cell_to_pixel_centered(position.x, g_snake_head_width);
+	int y = cell_to_pixel_centered(position.y, g_snake_head_height);
+	putimage_alphatransparent(nullptr, oriented, x, y, g_snake_head_key, OPAQUE_ALPHA);
 }
 
 // 绘制蛇身
-void draw_snake_body(const std::deque<Coord>& body)
+void draw_snake_body(const std::deque<Coord>& body, const Coord& head)
 {
-	if (g_snake_body_image && !body.empty())
+	if (!g_snake_body_image || body.empty())
 	{
-		for (size_t i = 0; i < body.size(); ++i)
-		{
-			int frame = static_cast<int>(i % SNAKE_BODY_FRAMES);
-			int src_x = frame * SNAKE_BODY_SIZE;
-			int src_y = 0;
+		return;
+	}
 
-			PIMAGE body_frame = newimage(SNAKE_BODY_SIZE, SNAKE_BODY_SIZE);
-			getimage(body_frame, g_snake_body_image, src_x, src_y, SNAKE_BODY_SIZE, SNAKE_BODY_SIZE);
-			putimage(body[i].x * CELL_SIZE, body[i].y * CELL_SIZE, body_frame);
-			delimage(body_frame);
+	for (size_t i = 0; i < body.size(); ++i)
+	{
+		const Coord& segment = body[i];
+		const Coord& reference = (i == 0) ? head : body[i - 1];
+		Direction dir = direction_from_points(segment, reference);
+		const int index = direction_to_index(dir);
+		PIMAGE oriented = g_snake_body_variants[index] ? g_snake_body_variants[index] : g_snake_body_image;
+		if (!oriented)
+		{
+			continue;
 		}
+
+		int x = cell_to_pixel_centered(segment.x, g_snake_body_width);
+		int y = cell_to_pixel_centered(segment.y, g_snake_body_height);
+		putimage_alphatransparent(nullptr, oriented, x, y, g_snake_body_key, OPAQUE_ALPHA);
 	}
 }
 
 // 绘制墙壁
 void draw_wall(const Coord& position)
 {
-	if (g_wall_image)
-	{
-		putimage(position.x * CELL_SIZE, position.y * CELL_SIZE, g_wall_image);
-	}
+	(void)position;
 }
 
 void draw_text_centered(int y, const std::string& text, int font_size, unsigned int color)

@@ -8,7 +8,7 @@
 // 
 
 Game::Game()
-	: map_size(get_default_map_size())
+	: map_size(PIXEL_MAP_SIZE)
 	, snake{}
 	, state_(std::make_unique<MainMenuState>())
 {

@@ -32,6 +32,6 @@ void PausedState::draw(Game* game)
     // 绘制暂停界面
     draw_background();
 
-    draw_text_centered(200, "游戏已暂停", 36, 0x00FFFFFF);
-    draw_text_centered(260, "按 ESC 返回主菜单", 24, 0x00FFFF66);
+    draw_text_centered(200, "游戏已暂停", 18, 0x00FFFFFF);
+    draw_text_centered(260, "按 ESC 返回主菜单", 12, 0x00FFFF66);
 }

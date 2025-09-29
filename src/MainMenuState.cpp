@@ -45,7 +45,7 @@ void MainMenuState::draw(Game* game)
     // 绘制主菜单界面
     draw_background();
 
-    draw_text_centered(140, "贪吃蛇", 48, 0x00FFFFFF);
-    draw_text_centered(220, "按空格、回车或方向键开始", 28, 0x00FFFF66);
-    draw_text_centered(280, "WASD / 方向键移动，ESC 暂停", 24, 0x00FFFFFF);
+    draw_text_centered(140, "贪吃蛇", 24, 0x00FFFFFF);
+    draw_text_centered(220, "按空格、回车或方向键开始", 14, 0x00FFFF66);
+    draw_text_centered(280, "WASD / 方向键移动，ESC 暂停", 12, 0x00FFFFFF);
 }

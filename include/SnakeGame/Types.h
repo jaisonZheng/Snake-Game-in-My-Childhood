@@ -44,7 +44,9 @@ inline Coord operator-(const Coord& lhs, const Coord& rhs)
 {
     return {lhs.x - rhs.x, lhs.y - rhs.y};
 }
-
+// 这里用了inline是因为发现如果不用inline，就会在其他每个文件都重载运算符，编译就会报错
+// 写在头文件中的重载运算符必须用inline，inline相当于像编译器保证，
+// 虽然你在很多个文件里都看到了这个函数，但是你看到的都是同一个！
 
 struct MapSize
 {
@@ -52,8 +54,9 @@ struct MapSize
     int height;
 };
 
-inline constexpr int CELL_SIZE = 32;
-
+inline constexpr int CELL_SIZE = 20; // 240 / 12 或 320 / 16
+inline constexpr MapSize TILE_COUNT{ 12, 16 };
+inline constexpr MapSize PIXEL_MAP_SIZE{ TILE_COUNT.width * CELL_SIZE, TILE_COUNT.height * CELL_SIZE };
 
 enum class Direction 
 { 
@@ -100,4 +103,10 @@ struct KeyEvent
     int key { 0 };
     KeyMessageType type { KeyMessageType::Unknown };
     unsigned int flags { 0 };
+};
+
+enum class Mode
+{
+    Classics,
+    Railways
 };
