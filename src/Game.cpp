@@ -7,12 +7,18 @@
 // 
 #include <memory>
 
-// 
+// 我决定给自己上一门课：
+// 叫做：当你自己做AI式的增删查改工作，是什么样的感受？
+// 嗯。就这样。
+// 给当前游戏加一个双人功能。
+
 Game::Game() : state_(new MainMenuState()), map_size{240, 320}
 {
 	reset_progress();
 
-	snake.reset(map_size);
+	snake.reset(Coord {3, 5}, Direction:: RIGHT);
+	if (playerNum_ == 2)
+		snake2.reset(Coord {8, 10}, Direction:: LEFT);
 
 	if (state_)
 	{
@@ -36,11 +42,14 @@ void Game::run()
 	shutdown();
 }
 
-void Game::start_new_game(const Mode& mode)
+void Game::start_new_game(const Mode& mode, int playerNum)
 {
+	playerNum_ = playerNum;
 	mode_ = mode;
 	reset_progress();
-	snake.reset(map_size);
+	snake.reset(Coord {3, 5}, Direction:: RIGHT);
+	if (playerNum_ == 2)
+		snake2.reset(Coord {8, 10}, Direction:: LEFT);
 	change_state(std::make_unique<PlayingState>());
 }
 
@@ -84,11 +93,14 @@ int Game::get_score() const
 	return score_;
 }
 
-void Game::on_apple_collected()
+void Game::on_apple_collected(bool is_snake2 = false)
 {
 	++total_apples_collected_;
 	++apples_since_last_bonus_;
-	score_ += 1;
+	if (!is_snake2)
+		score_ += 1;
+	else
+		score2_ += 1;
 
 	if (!bonus_position_ && !bonus_spawn_pending_ && apples_since_last_bonus_ >= bonus_required_apples_)
 	{
@@ -109,7 +121,7 @@ void Game::bonus_spawned(const Coord& position)
 	apples_since_last_bonus_ = 0;
 }
 
-void Game::on_bonus_collected()
+void Game::on_bonus_collected(bool is_snake2 = false)
 {
 	if (!bonus_position_)
 	{
@@ -118,7 +130,10 @@ void Game::on_bonus_collected()
 
 	const float remaining_time = std::max(0.0f, bonus_timer_);
 	const int bonus_score = static_cast<int>(std::lround(static_cast<double>(remaining_time) * 5.0));
-	score_ += bonus_score;
+	if (!is_snake2)
+		score_ += bonus_score;
+	else
+		score2_ += bonus_score;
 
 	bonus_position_.reset();
 	bonus_timer_ = 0.0f;
@@ -225,4 +240,34 @@ void Game::update_bonus_timer(float delta_seconds)
 Mode Game::get_mode()
 {
 	return mode_;
+}
+
+Snake& Game::get_snake2()
+{
+	return snake2;
+}
+
+int Game::get_playerNum()
+{
+	return playerNum_;
+}
+
+void Game::set_result(Result result)
+{
+	result_ = result;
+}
+
+Result Game::get_result()
+{
+	return result_;
+}
+
+int Game::get_score2()
+{
+	return score2_;
+}
+
+int Game::get_score()
+{
+	return score_;
 }

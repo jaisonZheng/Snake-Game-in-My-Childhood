@@ -110,3 +110,10 @@ enum class Mode
     Classics,
     Railways
 };
+
+enum class Result
+{
+    Snake2Win,
+    SnakeWin,
+    Tie
+};

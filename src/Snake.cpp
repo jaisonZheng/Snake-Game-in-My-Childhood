@@ -106,15 +106,11 @@ void Snake::move(const MapSize& boundary, bool is_eating_food)
     turn_locked = false;
 }
 
-void Snake::reset(const MapSize& map_size)
+void Snake::reset(const Coord& initialCoord, const Direction& initialDir)
 {
+    head = initialCoord;
     body.clear();
-    direction = Direction::RIGHT;
-
-    const int max_x = std::max(1, map_size.width / CELL_SIZE);
-    const int max_y = std::max(1, map_size.height / CELL_SIZE);
-
-    head = { max_x / 2, max_y / 2 };
     length = 1;
+    direction = initialDir;
     turn_locked = false;
 }

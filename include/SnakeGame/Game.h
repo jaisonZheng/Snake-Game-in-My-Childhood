@@ -15,7 +15,7 @@ public:
     Game();
 
     void run();
-    void start_new_game(const Mode& mode);
+    void start_new_game(const Mode& mode, int playerNum = 1);
 
     MapSize get_map_size() const;
     void change_state(std::unique_ptr<GameState> new_state);
@@ -23,14 +23,20 @@ public:
     const Snake& get_snake() const;
 
     int get_score() const;
-    void on_apple_collected();
+    void on_apple_collected(bool is_snake2);
     bool should_spawn_bonus() const;
     void bonus_spawned(const Coord& position);
-    void on_bonus_collected();
+    void on_bonus_collected(bool is_snake2);
     bool has_active_bonus() const;
     std::optional<Coord> get_bonus_position() const;
     float get_bonus_time_remaining() const;
     Mode get_mode();
+    Snake& get_snake2();
+    int get_playerNum();
+    void set_result(Result result);
+    Result get_result();
+    int get_score();
+    int get_score2();
 
 private:
     void process_events();
@@ -39,13 +45,17 @@ private:
     void reset_progress();
     void update_bonus_timer(float delta_seconds);
 
+    int playerNum_ = 1;
+    Result result_;
     MapSize map_size;
     Snake snake;
+    Snake snake2;
     std::unique_ptr<GameState> state_;
 
     Mode mode_ = Mode::Railways;
 
     int score_;
+    int score2_;
     int total_apples_collected_;
     int apples_since_last_bonus_;
     int bonus_required_apples_;

@@ -24,8 +24,9 @@ public:
     void draw(Game* game) override;
     
 private:
-    void generate_apple(Game* game, const MapSize& map_size, const Snake& snake);
-    void generate_bonus(Game* game, const MapSize& map_size, const Snake& snake);
+    void generate_apple(Game* game, const MapSize& map_size, const std::vector <Coord>& invalidIndex);
+    void generate_bonus(Game* game, const MapSize& map_size, const std::vector <Coord>& invalidIndex);
     void generate_walls(Mode mode); // 墙壁的位置是由游戏模式决定的。
-    bool is_position_valid(const Coord& pos, const MapSize& map_size, const Snake& snake) const;
+    bool is_position_valid(const Coord& pos, const MapSize& map_size, const std::vector <Coord> &index) const;
+    std::vector <Coord> get_InvalidIndex(Game* game);
 };

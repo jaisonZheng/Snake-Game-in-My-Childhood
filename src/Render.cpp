@@ -14,6 +14,7 @@
 // 所有跟ege这个垃圾图形库有关的东西全部在这个文件中搞定。
 // 这个图形库真的是依托答辩，我实在是搞不懂配环境就要配6h+的垃圾图形库怎么会有人用。
 // 还有这个狗屎image显示 显示png的透明部分都这么麻烦，，，，
+// 该死的ege啊，我只是想画个实心圆都这么困难吗。。。。。。。。。。。。。。。。
 
 namespace
 {
@@ -415,6 +416,7 @@ std::optional<KeyEvent> poll_key_event()
 	case ' ': // 空格键
 	case VK_RETURN: // 回车键
 	case 'r': // 模式鍵
+	case '2': // 双人模式键
 		event.type = KeyMessageType::Others;
 		break;
 	default:

@@ -5,12 +5,11 @@
 #include "../include/SnakeGame/Render.h"
 #include <random>
 #include <algorithm>
-
+#include <vector>
 
 PlayingState::PlayingState() 
     : game_speed(10), frame_counter(0)
 {
-    // 初始化苹果位置
     apple_position = {10, 10};
 }
 
@@ -23,56 +22,112 @@ void PlayingState::on_enter(Game* game)
         return;
     }
 
-
     walls.clear();
 
     MapSize map_size = game->get_map_size();
     generate_walls(game->get_mode());
 
-    Snake& snake = game->get_snake();
-    generate_apple(game, map_size, snake);
+    generate_apple(game, map_size, get_InvalidIndex(game));
 }
 
 void PlayingState::handle_input(Game* game, const KeyEvent& key)
 {
-    Snake& snake = game->get_snake();
-    
-    if (key.type == KeyMessageType::Direction)
+    if (game -> get_playerNum() == 1)
     {
-        // 处理WASD和方向键输入
-        switch (key.key)
+        Snake& snake = game->get_snake();
+        
+        if (key.type == KeyMessageType::Direction)
         {
-            case 'W':
-            case 'w':
-            case VK_UP:
-                snake.turn(Direction::UP);
-                break;
-            case 'S':
-            case 's':
-            case VK_DOWN:
-                snake.turn(Direction::DOWN);
-                break;
-            case 'A':
-            case 'a':
-            case VK_LEFT:
-                snake.turn(Direction::LEFT);
-                break;
-            case 'D':
-            case 'd':
-            case VK_RIGHT:
-                snake.turn(Direction::RIGHT);
-                break;
+            // 处理WASD和方向键输入
+            // 大写和小写都要处理。
+            switch (key.key)
+            {
+                case 'W':
+                case 'w':
+                case VK_UP:
+                    snake.turn(Direction::UP);
+                    break;
+                case 'S':
+                case 's':
+                case VK_DOWN:
+                    snake.turn(Direction::DOWN);
+                    break;
+                case 'A':
+                case 'a':
+                case VK_LEFT:
+                    snake.turn(Direction::LEFT);
+                    break;
+                case 'D':
+                case 'd':
+                case VK_RIGHT:
+                    snake.turn(Direction::RIGHT);
+                    break;
+            }
+        }
+        else if (key.type == KeyMessageType::Others)
+        {
+            // 处理其他按键
+            switch (key.key)
+            {
+                case VK_ESCAPE:
+                    // 返回主菜单
+                    game->set_result(Result::Tie);
+                    game->change_state(std::make_unique<MainMenuState>());
+                    break;
+            }
         }
     }
-    else if (key.type == KeyMessageType::Others)
+    else
     {
-        // 处理其他按键
-        switch (key.key)
+        Snake& snake = game->get_snake();
+        Snake& snake2 = game->get_snake2();
+        if (key.type == KeyMessageType::Direction)
         {
-            case VK_ESCAPE:
-                // 返回主菜单
-                game->change_state(std::make_unique<MainMenuState>());
-                break;
+            // 处理WASD和方向键输入
+            // 大写和小写都要处理。
+            switch (key.key)
+            {
+                case 'W':
+                case 'w':
+                    snake2.turn(Direction::UP);
+                    break;
+                case VK_UP:
+                    snake.turn(Direction::UP);
+                    break;
+                case 'S':
+                case 's':
+                    snake2.turn(Direction::DOWN);
+                    break;
+                case VK_DOWN:
+                    snake.turn(Direction::DOWN);
+                    break;
+                case 'A':
+                case 'a':
+                    snake2.turn(Direction::LEFT);
+                    break;
+                case VK_LEFT:
+                    snake.turn(Direction::LEFT);
+                    break;
+                case 'D':
+                case 'd':
+                    snake2.turn(Direction::RIGHT);
+                    break;
+                case VK_RIGHT:
+                    snake.turn(Direction::RIGHT);
+                    break;
+            }
+        }
+        else if (key.type == KeyMessageType::Others)
+        {
+            // 处理其他按键
+            switch (key.key)
+            {
+                case VK_ESCAPE:
+                    // 返回主菜单
+                    game->set_result(Result::Tie);
+                    game->change_state(std::make_unique<MainMenuState>());
+                    break;
+            }
         }
     }
 }
@@ -92,7 +147,6 @@ void PlayingState::update(Game* game)
     
     frame_counter++;
     
-    // 控制游戏速度
     if (frame_counter < 60 / game_speed)
         return;
         
@@ -101,45 +155,160 @@ void PlayingState::update(Game* game)
     Snake& snake = game->get_snake();
     MapSize map_size = game->get_map_size();
     
-    // 检查是否吃到苹果
+    // 两种奖励的检测 一种是apple 一种是bonus
     bool eating_apple = false;
     if (snake.get_head() == apple_position)
     {
         eating_apple = true;
-        game->on_apple_collected();
-        // 生成新的苹果位置
-        generate_apple(game, map_size, snake);
+        game->on_apple_collected(false);
+        generate_apple(game, map_size, get_InvalidIndex(game));
     }
 
     if (auto bonus_position = game->get_bonus_position())
     {
         if (snake.get_head() == *bonus_position)
         {
-            game->on_bonus_collected();
+            game->on_bonus_collected(false);
         }
     }
 
     if (game->should_spawn_bonus())
     {
-        generate_bonus(game, map_size, snake);
+        generate_bonus(game, map_size, get_InvalidIndex(game));
     }
     
-    // 移动蛇
     snake.move(map_size, eating_apple);
     
-    // 检查游戏结束条件
+    // 有两种死的可能 一种是撞到自己 一种是撞到墙。
     if (snake.is_crash_itself())
     {
-        // 游戏结束，切换到游戏结束状态
+        game->set_result(Result::Snake2Win);
         game->change_state(std::make_unique<GameOverState>());
+        return;
     }
     
     // 在这里写撞墙逻辑 因为这是唯一既有墙信息又能拿到snake信息的地方。
     for (Coord& wall : walls)
     {
         if (snake.get_head() == wall)
+        {
+            game->set_result(Result::Snake2Win);
             game->change_state(std::make_unique<GameOverState>());
+            return;
+        }
+
     }
+
+    if (game -> get_playerNum() == 2)
+    {
+        Snake& snake2 = game -> get_snake2();
+
+        // 奖励逻辑
+        bool eating_apple = false;
+        if (snake2.get_head() == apple_position)
+        {
+            eating_apple = true;
+            game->on_apple_collected(true);
+            generate_apple(game, map_size, get_InvalidIndex(game));
+        }
+
+        if (auto bonus_position = game->get_bonus_position())
+        {
+            if (snake2.get_head() == *bonus_position)
+            {
+                game->on_bonus_collected(true);
+            }
+        }
+
+        if (game->should_spawn_bonus())
+        {
+            generate_bonus(game, map_size, get_InvalidIndex(game));
+        }
+        
+        // 头与头的碰撞逻辑要放在移动逻辑前面 否则两条蛇都插进对方身体里了。
+        if (snake2.get_head() == snake.get_head())
+        {
+            game->set_result(Result::Tie);
+            game->change_state(std::make_unique<GameOverState>());
+            return;
+        }
+
+        // 移动逻辑
+        snake2.move(map_size, eating_apple);
+
+        // 同时也要放一份在移动后面 以防蛇2移动后和蛇1碰撞。
+        if (snake2.get_head() == snake.get_head())
+        {
+            game->set_result(Result::Tie);
+            game->change_state(std::make_unique<GameOverState>());
+            return;
+        }
+
+        // 碰撞逻辑
+        if (snake2.is_crash_itself())
+        {
+            game->set_result(Result::SnakeWin);        
+            game->change_state(std::make_unique<GameOverState>());
+            return;
+        }
+
+        for (Coord& wall : walls)
+        {
+            if (snake2.get_head() == wall)
+            {
+                game->set_result(Result::SnakeWin);
+                game->change_state(std::make_unique<GameOverState>());
+                return;
+            }       
+        }
+
+        // 碰撞逻辑中的互撞逻辑
+        for (auto& item : snake.get_body())
+        {
+            if (item == snake2.get_head())
+            {
+                game->set_result(Result::SnakeWin);
+                game->change_state(std::make_unique<GameOverState>());
+                return;
+            }
+        }
+        for (auto& item : snake2.get_body())
+        {
+            if (item == snake.get_head())
+            {
+                game->set_result(Result::Snake2Win);
+                game->change_state(std::make_unique<GameOverState>());
+                return;
+            }
+        }
+
+        // 谁先拿到30分谁就赢了
+        if (game->get_score() >= 30)
+        {
+            game->set_result(Result::SnakeWin);
+            game->change_state(std::make_unique<GameOverState>());
+        }
+        if (game->get_score2() >= 30)
+        {
+            game->set_result(Result::Snake2Win);
+            game->change_state(std::make_unique<GameOverState>());
+        }
+    }
+}
+
+std::vector <Coord> PlayingState::get_InvalidIndex(Game* game)
+{
+    std::vector <Coord> invalidIndex;
+    Snake& snake = game->get_snake();
+    invalidIndex.insert(invalidIndex.end(), snake.get_body().begin(), snake.get_body().end());
+    invalidIndex.push_back(snake.get_head());
+    if (game->get_playerNum() == 2)
+    {
+        Snake &snake2 = game->get_snake2();
+        invalidIndex.insert(invalidIndex.end(), snake2.get_body().begin(), snake2.get_body().end());
+        invalidIndex.push_back(snake2.get_head());
+    }
+    return invalidIndex;
 }
 
 void PlayingState::draw(Game* game)
@@ -172,9 +341,18 @@ void PlayingState::draw(Game* game)
     Snake& snake = game->get_snake();
     draw_snake_head(snake.get_head(), snake.get_direction());
     draw_snake_body(snake.get_body(), snake.get_head());
+
+    if (game->get_playerNum() == 2)
+    {
+        Snake& snake2 = game->get_snake2();
+        draw_snake_head(snake2.get_head(), snake2.get_direction());
+        draw_snake_body(snake2.get_body(), snake2.get_head());
+    }
 }
 
-void PlayingState::generate_apple(Game* game, const MapSize& map_size, const Snake& snake)
+
+// 这个函数还蛮复杂的 主要就是因为apple的生成位置有限制。
+void PlayingState::generate_apple(Game* game, const MapSize& map_size, const std::vector <Coord>& invalidIndex)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -209,12 +387,7 @@ void PlayingState::generate_apple(Game* game, const MapSize& map_size, const Sna
             }
         }
 
-        if (new_pos == snake.get_head())
-        {
-            continue;
-        }
-
-        if (!conflicts_bonus && is_position_valid(new_pos, map_size, snake))
+        if (!conflicts_bonus && is_position_valid(new_pos, map_size, invalidIndex))
         {
             found = true;
         }
@@ -226,7 +399,6 @@ void PlayingState::generate_apple(Game* game, const MapSize& map_size, const Sna
         return;
     }
 
-    // fallback: search entire grid sequentially
     for (int y = 1; y < max_y - 1 && !found; ++y)
     {
         for (int x = 1; x < max_x - 1 && !found; ++x)
@@ -241,12 +413,7 @@ void PlayingState::generate_apple(Game* game, const MapSize& map_size, const Sna
                 }
             }
 
-            if (fallback_pos == snake.get_head())
-            {
-                continue;
-            }
-
-            if (!conflicts_bonus && is_position_valid(fallback_pos, map_size, snake))
+            if (!conflicts_bonus && is_position_valid(fallback_pos, map_size, invalidIndex))
             {
                 apple_position = fallback_pos;
                 found = true;
@@ -260,7 +427,7 @@ void PlayingState::generate_apple(Game* game, const MapSize& map_size, const Sna
     }
 }
 
-void PlayingState::generate_bonus(Game* game, const MapSize& map_size, const Snake& snake)
+void PlayingState::generate_bonus(Game* game, const MapSize& map_size,const std::vector <Coord>& invalidIndex)
 {
     if (!game)
     {
@@ -300,7 +467,7 @@ void PlayingState::generate_bonus(Game* game, const MapSize& map_size, const Sna
             continue;
         }
 
-        if (!is_position_valid(new_pos, map_size, snake))
+        if (!is_position_valid(new_pos, map_size, invalidIndex))
         {
             continue;
         }
@@ -331,7 +498,7 @@ void PlayingState::generate_walls(Mode mode)
     }
 }
 
-bool PlayingState::is_position_valid(const Coord& pos, const MapSize& map_size, const Snake& snake) const
+bool PlayingState::is_position_valid(const Coord& pos, const MapSize& map_size, const std::vector <Coord> &index) const
 {    
     const int max_x = std::max(1, map_size.width / CELL_SIZE);
     const int max_y = std::max(1, map_size.height / CELL_SIZE);
@@ -349,12 +516,8 @@ bool PlayingState::is_position_valid(const Coord& pos, const MapSize& map_size, 
             return false;
     }
 
-    if (pos == snake.get_head())
-    {
-        return false;
-    }
 
-    for (const auto& segment : snake.get_body())
+    for (const auto& segment : index)
     {
         if (pos == segment)
         {

@@ -26,7 +26,7 @@ public:
     void turn(const Direction& dir);
 
     void move(const MapSize& boundary, bool is_eating_food = false);
-    void reset(const MapSize& map_size);
+    void reset(const Coord& initialCoord, const Direction& initialDir);
     
     // Game类作为主要类，应当能够获得snake的各种信息。
     const Coord& get_head() const { return head; }
