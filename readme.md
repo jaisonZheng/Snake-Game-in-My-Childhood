@@ -3,6 +3,7 @@
 既然是个优雅的工程实践，那就必须要有文档（对吧？）。
 
 这是一个贪吃蛇游戏（显而易见），游戏机制和UI风格方面尝试**复刻**我小时候玩的贪吃蛇版本，游戏素材来自别人的逆向工程。（[素材来源](https://store.bananahackers.net/#snek)）
+<img width="1202" height="803" alt="IMG-20250930110845946" src="https://github.com/user-attachments/assets/39218d0f-ae3f-48d4-b36e-9a5bb794dc59" />
 
 哦对了，去tmd EGE(Easy Graphics Engine)。一点都不easy，配环境就花了我不止6h。谁用谁倒霉（我是我们老师强制使用的）。
 ## 游戏机制
@@ -30,3 +31,8 @@
 ## 改进空间
 - 做一个页面更大的版本
 - 将第二条蛇的颜色换一下
+
+## 实现效果
+<img width="476" height="638" alt="IMG-20250930113116885" src="https://github.com/user-attachments/assets/8a1238a6-13da-4dec-9aba-e7cd4d33d303" />
+<img width="469" height="636" alt="IMG-20250930113140362" src="https://github.com/user-attachments/assets/4c515200-0567-4bc1-bb99-c38f33cce0ec" />
+
